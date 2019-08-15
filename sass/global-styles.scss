@@ -1,0 +1,132 @@
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px !important;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background-color: #ffffff;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+
+  min-height: 100vh;
+  overflow: hidden;
+
+  position: relative;
+
+  color: #000000;
+  font-family: $primary-font;
+
+  background-image: url('../img/rainbow-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto;
+
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  @media only screen and (min-width: $laptop) {
+    position: relative;
+
+    &::after {
+      position: fixed;
+      content: '';
+
+      background-image: url('../img/girl-jojo.png');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      width: 699px;
+      height: 690px;
+
+      right: 50%;
+      bottom: -245px;
+
+      z-index: -1;
+    }
+
+    &::before {
+      position: fixed;
+      content: '';
+
+      background-image: url('../img/eva-girl.png');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      width: 420px;
+      height: 599px;
+
+      left: 60%;
+      bottom: -150px;
+
+      z-index: -1;
+    }
+  }
+
+  @media only screen and (min-width: $laptop-wide) {
+    background-size: contain;
+    background-position: bottom 20px center;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    background-size: auto;
+    background-position: bottom 70px center;
+
+    &::after {
+      width: 899px;
+      height: 888px;
+
+      right: 47%;
+      bottom: -375px;
+    }
+
+    &::before {
+      width: 528px;
+      height: 760px;
+
+      left: 60%;
+      bottom: -230px;
+    }
+  }
+
+  @media only screen and (min-width: $hd) {
+    background-image: url('../img/rainbow-bg.png'), url('../img/rainbow-top.png');
+    background-size: 100%, auto;
+    background-position: bottom 100px center, top 66px left;
+
+    &::after {
+      right: 47%;
+      bottom: -230px;
+    }
+
+    &::before {
+      left: 57%;
+      bottom: -70px;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

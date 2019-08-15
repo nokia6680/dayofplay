@@ -1,0 +1,148 @@
+.popup-howto {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+
+  &--active {
+    display: flex;
+
+    transition: 0.3s ease-in;
+  }
+
+  &__wrapper {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-image: url('../img/popup-howto-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    border: none;
+    border-radius: 24px;
+
+    padding: 8px 8px;
+  }
+
+  &__close {
+    -webkit-tap-highlight-color: transparent;
+
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -30px;
+    right: 0px;
+
+    cursor: pointer;
+    outline: none;
+
+    background-color: transparent;
+
+    background-image: url('../img/cross.png');
+    background-size: 15px 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__content {
+    background-color: #ffffff;
+    border-radius: 18px;
+
+    @include flex-setting(column, flex-start, center);
+  }
+
+  &__title {
+    @include font-setting($primary-font-italic, 1.25em, 1.2, 900, #ffffff);
+
+    text-shadow: 1px 1px 0 #7d3192, 1px -1px 0 #7d3192, -1px 1px 0 #7d3192, -1px -1px 0 #7d3192;
+    letter-spacing: 0.51px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    padding-left: 0px;
+    padding-right: 30px;
+    margin-left: 50px;
+
+    list-style: disc;
+
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+  }
+
+  &__item {
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    @include font-setting($secondary-font, 0.75em, 1.2, 700, #7d3192);
+
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .popup-howto {
+    &__wrapper {
+      width: 368px;
+      height: 416px;
+
+      padding: 8px 8px;
+    }
+
+    &__close {
+      top: -20px;
+      right: -20px;
+    }
+
+    &__content {
+      border-radius: 24px;
+      height: 100%;
+    }
+
+    &__title {
+      margin-top: 35px;
+      margin-bottom: 25px;
+      font-size: 1.375em;
+    }
+
+    &__list {
+      padding-right: 24px;
+      margin-left: 50px;
+    }
+
+    &__item {
+      padding-left: 0px;
+      margin-bottom: 35px;
+
+      font-size: 0.875em;
+    }
+  }
+}

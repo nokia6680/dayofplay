@@ -1,0 +1,264 @@
+@mixin container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media only screen and (min-width: $mobile) {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  @media only screen and (min-width: $smt) {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  @media only screen and (min-width: $laptop-hd) {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: $laptop-wide) {
+    max-width: 1430px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@mixin checkbox-default {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+
+  position: relative;
+  padding-left: 25px;
+
+  @media only screen and (min-width: $mobile) {
+    padding-left: 30px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    padding-left: 25px;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    padding-left: 30px;
+  }
+}
+
+@mixin custom-checkbox {
+  position: absolute;
+  content: "";
+  display: block;
+
+  width: 22px;
+  height: 22px;
+
+  top: -6px;
+  left: 0;
+
+  border: 1px solid #a1afb4;
+  border-radius: 8px;
+  background-color: transparent;
+
+  @media only screen and (min-width: $mobile) {
+    width: 24px;
+    height: 24px;
+    top: -6px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    width: 18px;
+    height: 18px;
+
+    top: -6px;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    width: 24px;
+    height: 24px;
+
+    top: -6px;
+  }
+}
+
+@mixin checkbox-checked {
+  position: absolute;
+  content: "";
+  display: block;
+
+  width: 16px;
+  height: 16px;
+
+  top: -3px;
+  left: 3px;
+
+  background-color: #a1afb4;
+  border-radius: 5px;
+
+  @media only screen and (min-width: $mobile) {
+    width: 18px;
+    height: 18px;
+
+    top: -3px;
+    left: 3px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    width: 12px;
+    height: 12px;
+    top: -3px;
+    left: 3px;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    width: 18px;
+    height: 18px;
+
+    top: -3px;
+    left: 3px;
+  }
+}
+
+@mixin radio-default {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+
+  position: relative;
+  padding-left: 25px;
+
+  @media only screen and (min-width: $tablet) {
+    padding-left: 32px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    padding-left: 23px;
+  }
+}
+
+@mixin custom-radio {
+  position: absolute;
+  content: "";
+  display: block;
+
+  width: 14px;
+  height: 14px;
+
+  top: 1px;
+  left: 0;
+
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background-color: transparent;
+
+  @media only screen and (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+
+    top: 4px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    width: 14px;
+    height: 14px;
+
+    top: 3px;
+  }
+
+  @media only screen and (min-width: $widebook-sm) {
+    width: 19px;
+    height: 19px;
+
+    top: 4px;
+  }
+}
+
+@mixin radio-checked {
+  position: absolute;
+  content: "";
+
+  width: 14px;
+  height: 14px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+
+  top: 1px;
+  left: 0;
+
+  background-color: #f7c900;
+
+  @media only screen and (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+
+    top: 4px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    width: 14px;
+    height: 14px;
+
+    top: 3px;
+  }
+
+  @media only screen and (min-width: $widebook-sm) {
+    width: 19px;
+    height: 19px;
+    top: 4px;
+  }
+}
+
+@mixin soft-animation {
+  transition-property: initial;
+  transition-duration: 0.2s;
+  transition-timing-function: initial;
+  transition-delay: initial;
+}
+
+@mixin animation {
+  @-moz-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+  }
+  @-webkit-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+  }
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+  }
+}
+
+@mixin font-setting($family, $size, $line-height, $font-width, $color) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $font-width;
+  color: $color;
+}
+
+@mixin flex-setting($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

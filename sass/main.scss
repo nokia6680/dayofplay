@@ -1,0 +1,92 @@
+.main {
+  @include flex-setting(column, flex-start, center);
+  padding: 10px 10px;
+  margin: 0 auto;
+
+  max-width: 300px;
+}
+
+@media only screen and (min-width: $mobile) {
+  .main {
+    padding: 0;
+    margin: 0 auto;
+
+    max-width: 330px;
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .main {
+    max-width: 352px;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .main {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      background-image: url('../img/girl-bg.png');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      width: 712px;
+      height: 704px;
+
+      left: -515px;
+      bottom: -265px;
+
+      z-index: -1;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      background-image: url('../img/eva-girl.png');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      width: 400px;
+      height: 599px;
+
+      right: -315px;
+      bottom: -150px;
+
+      z-index: -1;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .main {
+    position: relative;
+
+    max-width: 300px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .main {
+    max-width: 352px;
+  }
+}
+
+@media only screen and (min-width: $hd) {
+  .main {
+
+  }
+}

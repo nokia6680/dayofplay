@@ -1,0 +1,188 @@
+.intro {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+
+  padding: 10px 10px 0px 10px;
+
+  &__title {
+    display: inline-flex;
+    width: 100%;
+
+    @include font-setting($primary-font-italic, 0.875em, 1.2, 900, #ec008c);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+
+  &__description {
+    display: inline-flex;
+    width: 100%;
+
+    @include font-setting($secondary-font, 0.75em, 1.2, 400, #7d3192);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .intro {
+    padding: 10px 5px 5px 5px;
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .intro {
+    padding: 10px 20px 10px 20px;
+
+    &__title {
+      font-size: 1.125em;
+    }
+
+    &__description {
+      font-size: 0.875em;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .intro {
+    padding: 5px 108px 24px 108px;
+
+    &__title {
+      font-size: 1.688em;
+
+      line-height: 1.5;
+
+      max-width: 550px;
+    }
+
+    &__description {
+      line-height: 1.5;
+      max-width: 440px;
+    }
+  }
+}
+@media only screen and (min-width: $laptop) {
+  .intro {
+    width: 100%;
+    padding: 0;
+
+    padding-left: 73px;
+    padding-right: 73px;
+
+    align-items: flex-end;
+    align-self: flex-end;
+
+    margin-top: -100px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+
+    &__title {
+      font-size: 1.125em;
+
+      line-height: 1.5;
+
+      max-width: 440px;
+    }
+
+    &__description {
+      font-size: 0.75em;
+      line-height: 1.5;
+      max-width: 380px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .intro {
+    padding: 0;
+    padding-right: 50px;
+    max-width: 1184px;
+    margin: 0 auto;
+    margin-top: -100px;
+    margin-bottom: 20px;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 112px;
+      height: 90px;
+
+      background-image: url('../img/arrow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      bottom: -110px;
+      right: 27%;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .intro {
+    padding: 0;
+    padding-right: 30px;
+    max-width: 1184px;
+    margin: 0 auto;
+    margin-top: -140px;
+    margin-bottom: 10px;
+
+    &__title {
+      font-size: 1.688em;
+      max-width: 560px;
+    }
+
+    &__description {
+      font-size: 1em;
+      max-width: 560px;
+    }
+
+    &::after {
+      width: 136px;
+      height: 109px;
+
+      bottom: -120px;
+      right: 23%;
+    }
+  }
+}
+
+@media only screen and (min-width: $hd) {
+  .intro {
+    padding: 0;
+    padding-right: 30px;
+    max-width: 1184px;
+    margin: 0 auto;
+    margin-top: -140px;
+    margin-bottom: 30px;
+
+    &__title {
+      font-size: 1.688em;
+      max-width: 560px;
+    }
+
+    &__description {
+      font-size: 1em;
+      max-width: 560px;
+    }
+
+    &::after {
+      width: 136px;
+      height: 109px;
+
+      bottom: -120px;
+      right: 23%;
+    }
+  }
+}
