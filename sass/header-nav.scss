@@ -1,5 +1,5 @@
 .header-nav {
-  @include flex-setting(row, space-between, center);
+  @include flex-setting(row, space-between, flex-start);
 
   width: 100%;
 
@@ -7,57 +7,83 @@
   padding-right: 10px;
   padding-top: 10px;
 
-  z-index: 12;
-  background-color: #ffffff;
+  height: 70px;
 
-  .hidden {
-    display: none;
+  &__layout {
+    @include flex-setting(column, flex-start, center);
+    position: absolute;
+    top: -1000px;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    z-index: 10;
+
+    &--active {
+      top: 60px;
+
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+
+      z-index: 10;
+    }
+  }
+
+  &--active {
+    justify-content: flex-end;
+    background-color: #ed575f;
+
+    .header-nav__logo {
+      display: none;
+    }
   }
 
   &__logo {
-    min-width: 136px;
-    max-width: 136px;
-    height: 76px;
+    display: block;
+    min-width: 128px;
+    max-width: 128px;
+    height: 60px;
   }
 
-  &__link {
-    display: inline-flex;
+  &__logo-link {
     width: 100%;
     height: 100%;
-    text-decoration: none;
   }
 
-  &__image {
+  &__logo-img {
     width: 100%;
     height: auto;
   }
 
   &__btn {
-    border: 2px solid #7d3192;
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
     background-color: transparent;
 
-    min-width: 40px;
-    max-width: 40px;
-    height: 40px;
-
-    border-radius: 50%;
-
-    cursor: pointer;
-    outline: none;
-
     &--open {
-      background-image: url('../img/burger-closed.svg');
-      background-size: 22px 18px;
+      background-image: url('../img/open-btn.png');
       background-position: 50% 50%;
       background-repeat: no-repeat;
+      background-size: 27px 20px;
+      background-color: #ed575f;
     }
-
     &--close {
-      background-image: url('../img/burger-opened.svg');
-      background-size: 20px 21px;
+      background-image: url('../img/close-btn.png');
       background-position: 50% 50%;
       background-repeat: no-repeat;
+      background-size: 23px 23px;
+      background-color: #ffffff;
     }
+  }
+
+  .hidden {
+    display: none;
   }
 }
 
@@ -65,143 +91,38 @@
   .header-nav {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 20px;
+
+    height: 80px;
+
+    &__layout {
+      &--active {
+        top: 70px;
+      }
+    }
 
     .hidden {
       display: none;
-    }
-
-    &__logo {
-      min-width: 163px;
-      max-width: 163px;
-      height: 91px;
-    }
-
-    &__btn {
-      min-width: 50px;
-      max-width: 50px;
-      height: 50px;
-
-      &--open {
-        background-size: 27px 23px;
-      }
-
-      &--close {
-        background-size: 20px 21px;
-      }
     }
   }
 }
 
 @media only screen and (min-width: $hdm) {
-  .header-nav {
-    &__logo {
-      min-width: 204px;
-      max-width: 204px;
-      height: 114px;
-    }
 
-    &__btn {
-      min-width: 60px;
-      max-width: 60px;
-      height: 60px;
-
-      &--open {
-        background-size: 33px 27px;
-      }
-
-      &--close {
-        background-size: 24px 25px;
-      }
-    }
-  }
 }
 
 @media only screen and (min-width: $tablet) {
-  .header-nav {
-    padding-left: 48px;
-    padding-right: 48px;
 
-    &__logo {
-      min-width: 272px;
-      max-width: 272px;
-      height: 152px;
-    }
-
-    &__btn {
-      min-width: 87px;
-      max-width: 87px;
-      height: 87px;
-
-      &--open {
-        background-size: 55px 46px;
-      }
-
-      &--close {
-        background-size: 41px 42px;
-      }
-    }
-  }
 }
 
 @media only screen and (min-width: $laptop) {
-  .header-nav {
-    align-items: flex-start;
-    padding-left: 73px;
-    padding-right: 73px;
 
-    background-color: transparent;
-
-    position: relative;
-
-    &__logo {
-      min-width: 297px;
-      max-width: 297px;
-      height: 166px;
-    }
-
-    &__btn {
-      display: none;
-    }
-  }
 }
 
 @media only screen and (min-width: $laptop-wide) {
-  .header-nav {
-    max-width: 1184px;
-    padding: 0;
-    padding-top: 10px;
-    margin: 0 auto;
-  }
+
 }
 
 @media only screen and (min-width: $widebook-hd) {
-  .header-nav {
-    padding-top: 16px;
 
-    &__logo {
-      min-width: 372px;
-      max-width: 372px;
-      height: 208px;
-      transition: 0.1s ease-in;
-
-      position: relative;
-
-
-      &::after {
-        position: absolute;
-        content: '';
-
-        width: 92px;
-        height: 140px;
-
-        top: 20%;
-        right: -45%;
-
-        background-image: url('../img/candy.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-      }
-    }
-  }
 }

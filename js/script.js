@@ -1,4 +1,5 @@
-var menuText = document.querySelector(".nav-menu");
+var menuText = document.querySelector(".header-nav__layout");
+var layer = document.querySelector(".header-nav");
 var menuList = document.querySelector(".nav-list");
 var menuOpen = document.querySelector(".header-nav__btn--open");
 var menuClose = document.querySelector(".header-nav__btn--close");
@@ -6,7 +7,8 @@ var menuClose = document.querySelector(".header-nav__btn--close");
 if (menuText) {
   menuOpen.addEventListener("click", function(event) {
     event.preventDefault();
-    menuText.classList.add("nav-menu--active");
+    menuText.classList.add("header-nav__layout--active");
+    layer.classList.add("header-nav--active");
     menuList.classList.add("nav-list--active");
     menuOpen.classList.add("hidden");
     menuClose.classList.remove("hidden");
@@ -14,14 +16,16 @@ if (menuText) {
 
   menuText.addEventListener("click", function(event) {
     event.stopPropagation();
-    menuText.classList.remove("nav-menu--active");
+    menuText.classList.remove("header-nav__layout--active");
+    layer.classList.remove("header-nav--active");
     menuList.classList.remove("nav-list--active");
     menuOpen.classList.remove("hidden");
     menuClose.classList.add("hidden");
   });
 
   menuClose.addEventListener("click", function() {
-    menuText.classList.remove("nav-menu--active");
+    menuText.classList.remove("header-nav__layout--active");
+    layer.classList.remove("header-nav--active");
     menuList.classList.remove("nav-list--active");
     menuOpen.classList.remove("hidden");
     menuClose.classList.add("hidden");
@@ -29,70 +33,67 @@ if (menuText) {
 
   window.addEventListener("keydown", function(event) {
     if (event.keyCode === 27) {
-      menuText.classList.remove("nav-menu--active");
+      menuText.classList.remove("header-nav__layout--active");
+      layer.classList.remove("header-nav--active");
       menuList.classList.remove("nav-list--active");
       menuOpen.classList.remove("hidden");
       menuClose.classList.add("hidden");
     }
   });
 }
-/*Открытие попапа*/
-var popupBody = document.querySelector(".popup-howto");
-var popupOpen = document.querySelector(".nav-list__link--howto");
-var popupClose = document.querySelector(".popup-howto__close");
 
-if (popupBody) {
-  popupOpen.addEventListener("click", function(event) {
-    event.preventDefault();
-    popupBody.classList.add("popup-howto--active");
-  });
+$(".slider").slick({
+  infinite: false,
+  initialSlide: 0,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: true,
+  prevArrow: '<div class="prev"></div>',
+  nextArrow: '<div class="next"></div>',
 
-  popupBody.addEventListener("click", function(event) {
-    event.stopPropagation();
-    popupBody.classList.remove("popup-howto--active");
-  });
-
-  popupClose.addEventListener("click", function() {
-    popupBody.classList.remove("popup-howto--active");
-  });
-
-  window.addEventListener("keydown", function(event) {
-    if (event.keyCode === 27) {
-      popupBody.classList.remove("popup-howto--active");
+  responsive: [{
+      breakpoint: 9999,
+      settings: {
+        infinite: false,
+        initialSlide: 0,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        prevArrow: '<div class="prev"></div>',
+        nextArrow: '<div class="next"></div>'
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        infinite: false,
+        initialSlide: 0,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        fade: true,
+        arrows: true,
+        prevArrow: '<div class="prev"></div>',
+        nextArrow: '<div class="next"></div>'
+      }
     }
-  });
-}
+  ]
+});
 
-/*Открытие попапа*/
-var popup2Body = document.querySelector(".popup-prize");
-var popup2Open = document.querySelector(".nav-list__link--prize");
-var popup2Close = document.querySelector(".popup-prize__close");
+$(document).ready(function(){
+	$("#main").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
 
-if (popup2Body) {
-  popup2Open.addEventListener("click", function(event) {
-    event.preventDefault();
-    popup2Body.classList.add("popup-prize--active");
-  });
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
 
-  popup2Body.addEventListener("click", function(event) {
-    event.stopPropagation();
-    popup2Body.classList.remove("popup-prize--active");
-  });
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
 
-  popup2Close.addEventListener("click", function() {
-    popup2Body.classList.remove("popup-prize--active");
-  });
-
-  window.addEventListener("keydown", function(event) {
-    if (event.keyCode === 27) {
-      popup2Body.classList.remove("popup-prize--active");
-    }
-  });
-}
-
-$(document).ready( function() {
-    $("#fl_inp").change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         $("#fl_nm").html(filename);
-    });
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
 });

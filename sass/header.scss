@@ -1,131 +1,31 @@
 .header {
-  @include flex-setting(column, flex-start, stretch);
   width: 100%;
 
-  &__mts {
-    @include flex-setting(row, space-between, center);
-    width: 100%;
-
-    background-color: #e30611;
-    box-shadow: 0 3px 7px rgba(227, 6, 17, 0.33);
-
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  &__note {
-    @include font-setting($alternate-font, 0.625em, 1.2, 300, #fff);
-
-    letter-spacing: 0.48px;
-    text-transform: uppercase;
-  }
-
-  &__img {
-    width: 70px;
-    height: 18px;
-  }
+  background-color: transparent;
 }
 
 @media only screen and (min-width: $mobile) {
   .header {
-    &__mts {
-      padding-top: 7px;
-      padding-bottom: 7px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    &__note {
-      font-size: 0.625em;
-    }
-
-    &__img {
-      width: 94px;
-      height: 24px;
-    }
+    margin-bottom: 10px;
   }
 }
 
 @media only screen and (min-width: $hdm) {
-  .header {
-    &__mts {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
 
-    &__note {
-      font-size: 0.75em;
-    }
-  }
 }
 
 @media only screen and (min-width: $tablet) {
-  .header {
-    &__mts {
-      padding-top: 23px;
-      padding-bottom: 23px;
-      padding-left: 48px;
-      padding-right: 48px;
-    }
 
-    &__note {
-      font-size: 1.313em;
-    }
-  }
 }
 
 @media only screen and (min-width: $laptop) {
-  .header {
-    &__mts {
-      padding-top: 15px;
-      padding-bottom: 14px;
-      padding-left: 73px;
-      padding-right: 73px;
-      transition: 0.2s ease-in;
-    }
 
-    &__note {
-      font-size: 1em;
-    }
-
-    &__img {
-      width: 54px;
-      height: 16px;
-    }
-  }
 }
 
 @media only screen and (min-width: $widebook-hd) {
-  .header {
-    &__mts {
-      padding-top: 23px;
-      padding-bottom: 24px;
-      padding-left: 152px;
-      padding-right: 152px;
-      transition: 0.2s ease-in;
-    }
 
-    &__note {
-      font-size: 1.313em;
-    }
-
-    &__img {
-      width: 94px;
-      height: 24px;
-      transition: 0.2s ease-in;
-    }
-  }
 }
 
 @media only screen and (min-width: $hd) {
-  .header {
-    &__mts {
-      padding-left: 352px;
-      padding-right: 352px;
-    }
-  }
+
 }

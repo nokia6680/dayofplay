@@ -2,144 +2,86 @@
   @include flex-setting(column, flex-start, center);
   width: 100%;
 
-  border: 6px solid #7d3192;
-  border-radius: 18px;
-  box-shadow: 0 2px 5px rgba(125, 49, 146, 0.3);
-  background-color: #ffffff;
+  &__description {
+    @include font-setting($secondary-font, 0.75em, 1.2, 900, #3fbeb7);
+    text-align: center;
 
-  padding: 10px 10px;
+    letter-spacing: 0.32px;
+
+    max-width: 220px;
+
+    margin-bottom: 10px;
+  }
+
+  &__textarea {
+    margin-bottom: 10px;
+
+    width: 100%;
+
+    border: 2px solid #aab7b9;
+
+    resize: none;
+
+    @include font-setting($secondary-font, 0.875em, 1.2, 500, #073f72);
+
+    letter-spacing: 0.37px;
+
+    cursor: text;
+    outline: none;
+
+    padding: 8px 8px;
+
+    max-height: 80px;
+    min-height: 80px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: #3fbeb7;
+      transition: 0.1s ease-in;
+    }
+  }
 
   &__submit {
     @include flex-setting(column, center, center);
-    @include font-setting($primary-font, 0.875em, 1.2, 900, #ffffff);
+    @include font-setting($primary-font, 1em, 1.2, 900, #ffffff);
 
     text-transform: uppercase;
-    letter-spacing: 0.59px;
+    letter-spacing: 0.42px;
 
-    width: 130px;
-    height: 30px;
+    width: 176px;
+    height: 40px;
 
     border: none;
-    background-color: #fc38a2;
-    box-shadow: inset 0 2px 4px #ff68ba, inset 0 -2px 4px #d32b85;
-    border-radius: 10px;
-
-    transform: skewX(-15deg);
+    background-color: #2da120;
 
     cursor: pointer;
     outline: none;
 
     &:hover,
     &:active {
-      box-shadow: inset 0 2px 1px #ff68ba, inset 0 -2px 1px #d32b85;
+      box-shadow: inset 0 2px 2px #2da120, inset 0 -2px 2px #2da120;
       transition: 0.2s ease-in;
     }
   }
 }
 
 @media only screen and (min-width: $mobile) {
-  .main-form {
-    border: 8px solid #7d3192;
-    border-radius: 28px;
 
-    padding: 15px 15px;
-
-    &__submit {
-      font-size: 1em;
-
-      width: 189px;
-      height: 41px;
-    }
-  }
 }
 
 @media only screen and (min-width: $hdm) {
-  .main-form {
-    padding: 28px 24px;
-  }
+
 }
 
 @media only screen and (min-width: $tablet) {
-  .main-form {
-    position: relative;
-  }
+
 }
 
 @media only screen and (min-width: $laptop) {
-  .main-form {
-    padding: 20px 25px;
 
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-
-      width: 53px;
-      height: 51px;
-
-      background-image: url('../img/star-yellow.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-
-      top: -40px;
-      left: -35px;
-    }
-
-    &::before {
-      position: absolute;
-      content: '';
-
-      width: 62px;
-      height: 59px;
-
-      background-image: url('../img/star-red.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-
-      bottom: -40px;
-      right: -40px;
-    }
-
-    &__submit {
-      font-size: 0.933em;
-
-      width: 161px;
-      height: 36px;
-    }
-  }
 }
 
 @media only screen and (min-width: $widebook-hd) {
-  .main-form {
-    padding: 24px 28px;
 
-    position: relative;
-    height: 407px;
-
-    &::after {
-      width: 61px;
-      height: 58px;
-
-      top: -45px;
-      left: -35px;
-    }
-
-    &::before {
-      width: 72px;
-      height: 69px;
-
-      bottom: -45px;
-      right: -40px;
-    }
-
-    &__submit {
-      font-size: 1.063em;
-
-      width: 189px;
-      height: 41px;
-    }
-  }
 }

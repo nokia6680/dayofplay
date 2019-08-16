@@ -1,0 +1,88 @@
+.info {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+
+  max-width: 300px;
+
+  &__description {
+    background-color: #073f72;
+    box-shadow: 2px 2px 0 #00c5df;
+
+    width: 280px;
+
+    @include flex-setting(column, center, center);
+
+    &-text {
+      text-align: center;
+
+      @include font-setting($primary-font, 0.875em, 1.2, 700, #fff7df);
+
+      max-width: 270px;
+    }
+  }
+
+  &__event {
+    @include flex-setting(column, center, center);
+
+    &-text {
+      text-align: center;
+
+      @include font-setting($primary-font, 0.75em, 1.2, 700, #073f72);
+
+      margin-top: 3px;
+      margin-bottom: 3px;
+
+      max-width: 280px;
+    }
+  }
+
+  &__btn {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .info {
+    max-width: 340px;
+    margin-top: 0;
+
+    &__description {
+      width: 300px;
+
+      &-text {
+        font-size: 1em;
+        max-width: 280px;
+      }
+    }
+
+    &__event {
+      &-text {
+        font-size: 0.875em;
+
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+
+}
+
+@media only screen and (min-width: $tablet) {
+
+}
+
+@media only screen and (min-width: $laptop) {
+
+}
+
+@media only screen and (min-width: $laptop-wide) {
+
+}
+
+@media only screen and (min-width: $widebook-hd) {
+
+}

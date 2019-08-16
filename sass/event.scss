@@ -1,0 +1,96 @@
+.event {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+
+  background-image: url('../img/second-bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  padding-top: 10px;
+
+  &__wrapper {
+    @include flex-setting(column, flex-start, center);
+
+    width: 100%;
+  }
+
+  &__info {
+    @include flex-setting(column, flex-start, center);
+    width: 100%;
+  }
+
+  &__info-title {
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 0.875em, 1.2, 900, #fff7df);
+
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: #073f72;
+    box-shadow: 3px 3px 0 #ffffff;
+
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__info-description {
+    max-width: 290px;
+
+    @include font-setting($primary-font, 0.625em, 1.2, 900, #073f72);
+
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .event {
+    background-image: url('../img/second-bg.png');
+    padding-top: 10px;
+
+    &__info-title {
+      font-size: 1em;
+
+      width: 340px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    &__info-description {
+      max-width: 290px;
+
+      font-size: 0.75em;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+
+}
+
+@media only screen and (min-width: $tablet) {
+
+}
+@media only screen and (min-width: $laptop) {
+
+}
+
+@media only screen and (min-width: $laptop-wide) {
+
+}
+
+@media only screen and (min-width: $widebook-hd) {
+
+}
+
+@media only screen and (min-width: $hd) {
+
+}
