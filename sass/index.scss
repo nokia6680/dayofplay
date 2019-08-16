@@ -87,11 +87,37 @@
 }
 
 @media only screen and (min-width: $hdm) {
+  .index {
+    &__controls {
+      max-width: 380px;
+      margin-bottom: 20px;
+    }
 
+    &__controls-btn {
+      font-size: 0.875em;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablet) {
+  .index {
+    background-position: left -30px top 50%, top center;
 
+    &__controls {
+      max-width: 560px;
+    }
+
+    &__controls-btn {
+      font-size: 1.125em;
+      padding: 16px 18px;
+      height: 56px;
+    }
+
+    &__btn {
+      width: 40px;
+      height: 20px;
+    }
+  }
 }
 
 @media only screen and (min-width: $laptop) {

@@ -3,10 +3,10 @@
 
   width: 100%;
 
-  background-image: url('../img/second-bg.png');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background-image: url('../img/fruits-mob.png'), url('../img/second-bg.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 60% left, top center;
+  background-size: 100%, cover;
 
   padding-top: 10px;
 
@@ -53,7 +53,6 @@
 
 @media only screen and (min-width: $mobile) {
   .event {
-    background-image: url('../img/second-bg.png');
     padding-top: 10px;
 
     &__info-title {
@@ -73,11 +72,47 @@
 }
 
 @media only screen and (min-width: $hdm) {
+  .event {
+    padding-top: 10px;
 
+    &__info-title {
+      font-size: 1.125em;
+
+      width: 380px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    &__info-description {
+      max-width: 400px;
+
+      font-size: 0.875em;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablet) {
+  .event {
+    background-position: top 40% left, top center;
+    padding-top: 116px;
 
+    &__info-title {
+      font-size: 1.625em;
+      letter-spacing: 0.6px;
+
+      width: 560px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin-bottom: 11px;
+    }
+
+    &__info-description {
+      max-width: 560px;
+      line-height: 1.4;
+      letter-spacing: 0.32px;
+    }
+  }
 }
 @media only screen and (min-width: $laptop) {
 

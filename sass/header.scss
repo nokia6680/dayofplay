@@ -11,11 +11,15 @@
 }
 
 @media only screen and (min-width: $hdm) {
-
+  .header {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (min-width: $tablet) {
-
+  .header {
+    margin-bottom: 16px;
+  }
 }
 
 @media only screen and (min-width: $laptop) {

@@ -50,16 +50,8 @@
   position: relative;
   padding-left: 25px;
 
-  @media only screen and (min-width: $mobile) {
-
-  }
-
-  @media only screen and (min-width: $laptop) {
-
-  }
-
-  @media only screen and (min-width: $widebook-hd) {
-
+  @media only screen and (min-width: $hdm) {
+    padding-left: 32px;
   }
 }
 
@@ -77,16 +69,9 @@
   border: 2px solid #aab7b9;
   background-color: transparent;
 
-  @media only screen and (min-width: $mobile) {
-
-  }
-
-  @media only screen and (min-width: $laptop) {
-
-  }
-
-  @media only screen and (min-width: $widebook-hd) {
-
+  @media only screen and (min-width: $hdm) {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -103,16 +88,9 @@
 
   background-color: #aab7b9;
 
-  @media only screen and (min-width: $mobile) {
-
-  }
-
-  @media only screen and (min-width: $laptop) {
-
-  }
-
-  @media only screen and (min-width: $widebook-hd) {
-
+  @media only screen and (min-width: $hdm) {
+    width: 16px;
+    height: 16px;
   }
 }
 

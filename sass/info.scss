@@ -68,11 +68,55 @@
 }
 
 @media only screen and (min-width: $hdm) {
+  .info {
+    max-width: 100%;
+    margin-top: 0;
 
+    &__description {
+      width: 340px;
+
+      &-text {
+        font-size: 1.125em;
+        max-width: 300px;
+      }
+    }
+
+    &__event {
+      &-text {
+        max-width: 320px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $tablet) {
+  .info {
+    max-width: 100%;
+    margin-top: 0;
 
+    &__description {
+      width: 640px;
+      transition: 0.2s ease-in;
+
+      &-text {
+        font-size: 1.125em;
+        max-width: 600px;
+        transition: 0.2s ease-in;
+      }
+    }
+
+    &__event {
+      &-text {
+        font-size: 0.875em;
+        max-width: 500px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        transition: 0.2s ease-in;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $laptop) {

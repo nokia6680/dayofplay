@@ -107,12 +107,69 @@
   }
 }
 
-@media only screen and (min-width: $hdm) {
+@media only screen and (min-width: 414px) {
+  .header-nav {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
 
+    height: 100px;
+
+    &__logo {
+      min-width: 192px;
+      max-width: 192px;
+      height: 90px;
+    }
+
+    &__layout {
+      &--active {
+        top: 100px;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablet) {
+  .header-nav {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 16px;
 
+    height: 136px;
+
+    &__logo {
+      min-width: 256px;
+      max-width: 256px;
+      height: 120px;
+    }
+
+    &__btn {
+      width: 84px;
+      height: 84px;
+
+      &--open {
+        background-size: 55px 40px;
+      }
+
+      &--close {
+        background-size: 45px 46px;
+      }
+    }
+
+    &__layout {
+      &--active {
+        top: 136px;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (min-width: $laptop) {

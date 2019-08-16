@@ -78,5 +78,27 @@
 }
 
 @media only screen and (min-width: $hdm) {
+  .popup-form {
+    &__wrapper {
+      width: 384px;
+      padding: 24px 24px;
+    }
 
+    &__close {
+      width: 32px;
+      height: 32px;
+
+      background-size: 16px 16px;
+    }
+
+    &__title {
+      font-size: 1.125em;
+
+      margin-top: 0;
+    }
+
+    &__description {
+      font-size: 0.875em;
+    }
+  }
 }

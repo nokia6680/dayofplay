@@ -1,3 +1,85 @@
 .social-list {
   display: none;
 }
+
+@media only screen and (min-width: $tablet) {
+  .social-list {
+    width: auto;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    z-index: 5;
+
+    @include flex-setting(row, center, center);
+
+    &__item {
+      width: 30px;
+      height: 30px;
+
+      border-radius: 50%;
+      background-color: #073f72;
+
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #00c5df;
+        transition: 0.1s ease-in;
+      }
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+
+      position: relative;
+
+      .fa-facebook-f::before {
+        position: absolute;
+        content: '\f39e';
+        font-size: 1em;
+        color: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .fa-vk::before {
+        position: absolute;
+        content: '\f189';
+        font-size: 1em;
+        color: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .fa-twitter::before {
+        position: absolute;
+        content: '\f099';
+        font-size: 1em;
+        color: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .fa-instagram::before {
+        position: absolute;
+        content: '\f16d';
+        font-size: 1em;
+        color: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

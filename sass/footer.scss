@@ -11,3 +11,12 @@
 
   @include flex-setting(column, center, center);
 }
+
+@media only screen and (min-width: $tablet) {
+  .footer {
+    padding-top: 13px;
+    padding-bottom: 8px;
+
+    height: 56px;
+  }
+}

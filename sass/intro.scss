@@ -68,12 +68,44 @@
   }
 }
 
-@media only screen and (min-width: $hdm) {
-
-}
-
 @media only screen and (min-width: $tablet) {
+  .intro {
+    max-width: 630px;
+    transition: 0.2s ease-in;
 
+    &__details {
+      margin-bottom: 20px;
+    }
+
+    &__details-pic {
+      width: 568px;
+      height: 398px;
+    }
+
+    &__details-date {
+      width: 466px;
+      height: 98px;
+      margin-top: -95px;
+
+      &-text {
+        font-size: 3.125em;
+        letter-spacing: 1.15px;
+      }
+    }
+
+    &__details-time {
+      width: 162px;
+      min-height: 38px;
+      height: 38px;
+      margin-top: -35px;
+      margin-left: 120px;
+
+      &-text {
+        font-size: 1.375em;
+        letter-spacing: 0.69px;
+      }
+    }
+  }
 }
 @media only screen and (min-width: $laptop) {
 

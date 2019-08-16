@@ -66,22 +66,28 @@
   }
 }
 
-@media only screen and (min-width: $mobile) {
-
-}
-
 @media only screen and (min-width: $hdm) {
+  .main-form {
+    &__description {
+      font-size: 0.875em;
 
-}
+      max-width: 300px;
+      margin-bottom: 11px;
+    }
 
-@media only screen and (min-width: $tablet) {
+    &__textarea {
+      margin-bottom: 14px;
 
-}
+      font-size: 1em;
 
-@media only screen and (min-width: $laptop) {
+      padding: 8px 8px;
 
-}
+      max-height: 104px;
+      min-height: 104px;
+    }
 
-@media only screen and (min-width: $widebook-hd) {
-
+    &__submit {
+      font-size: 1.125em;
+    }
+  }
 }
