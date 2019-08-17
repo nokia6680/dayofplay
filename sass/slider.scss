@@ -135,10 +135,11 @@
     height: 289px;
 
     background-color: transparent;
+    /*
     background-image: url('../img/slider-item-bg.png');
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover;
+    background-size: cover;*/
 
     @include flex-setting(column, flex-start, center);
     display: flex !important;
@@ -146,13 +147,21 @@
     cursor: pointer;
     outline: none;
 
+    object-fit: cover;
+    /*
     &:hover,
     &:active {
       .slider__item-frame {
         border-color: #00c5df;
         transition: 0.2s ease-in;
       }
-    }
+    }*/
+  }
+
+  /*Временноо*/
+  &__item-photo {
+    width: 100%;
+    height: auto;
   }
 
   &__item-frame {
@@ -645,5 +654,351 @@
         transform: rotate(-3deg);
       }
     }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .slider {
+    width: 656px;
+
+    &:not(.slick-initialized) {
+      .slick-list {
+        height: 252px !important;
+      }
+    }
+
+    .slick-dots {
+      bottom: -35px;
+
+      button {
+        width: 14px;
+        height: 14px;
+
+        margin: 0 0.25em;
+      }
+
+      li.slick-active button {
+        width: 14px;
+        height: 14px;
+
+        &::after {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .prev,
+    .next {
+      width: 31px;
+      height: 59px;
+    }
+
+    .prev {
+      top: 45%;
+      left: -66px;
+
+      background-size: 31px 59px;
+    }
+
+    .next {
+      top: 45%;
+      right: -66px;
+
+      background-size: 31px 59px;
+    }
+
+    &__item {
+      width: 200px !important;
+      height: 252px;
+    }
+
+    &__item-frame {
+      justify-content: flex-end;
+      border-width: 10px;
+
+      &-1 {
+        &::after {
+          background-image: url('../img/slime-1.png');
+          width: 188px;
+          height: 140px;
+
+          top: -15px;
+          left: -5px;
+        }
+      }
+
+      &-2 {
+        &::before {
+          background-image: url('../img/slime-22.png');
+          width: 46px;
+          height: 52px;
+
+          bottom: 50%;
+          right: 10%;
+        }
+
+        &::after {
+          background-image: url('../img/slime-2.png');
+
+          width: 187px;
+          height: 175px;
+
+          bottom: -15px;
+          right: -10px;
+        }
+      }
+
+      &-3 {
+        &::before {
+          background-image: url('../img/slime-33.png');
+
+          width: 118px;
+          height: 80px;
+
+          bottom: -10px;
+          left: -10px;
+        }
+
+        &::after {
+          background-image: url('../img/slime-3.png');
+
+          width: 199px;
+          height: 131px;
+
+          top: -10px;
+          right: -20px;
+        }
+      }
+    }
+
+    &__item-pic {
+      z-index: 2;
+      align-self: flex-end;
+
+      &-1 {
+        width: 243px;
+        min-width: 243px;
+        max-width: 243px;
+        height: 429px;
+      }
+
+      &-2 {
+        width: 288px;
+        min-width: 288px;
+        max-width: 288px;
+        height: 431px;
+      }
+
+      &-3 {
+        align-self: center;
+        width: 215px;
+        min-width: 215px;
+        max-width: 215px;
+        height: 388px;
+      }
+    }
+
+    &__item-name {
+      font-size: 1.375em;
+
+      padding: 17px 26px;
+
+      z-index: 3;
+
+      &-1 {
+        top: 50%;
+        left: 7%;
+
+        transform: rotate(3deg);
+      }
+
+      &-2 {
+        top: 50%;
+        right: 7%;
+
+        transform: rotate(-7deg);
+      }
+
+      &-3 {
+        top: 55%;
+        left: 10%;
+
+        transform: rotate(-3deg);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .slider {
+    width: 896px;
+
+    &:not(.slick-initialized) {
+      .slick-list {
+        height: 344px !important;
+      }
+    }
+
+    .slick-dots {
+      bottom: -35px;
+
+      button {
+        width: 16px;
+        height: 16px;
+
+        margin: 0 0.25em;
+      }
+
+      li.slick-active button {
+        width: 16px;
+        height: 16px;
+
+        &::after {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .prev,
+    .next {
+      width: 36px;
+      height: 72px;
+    }
+
+    .prev {
+      top: 45%;
+      left: -66px;
+
+      background-size: 36px 72px;
+    }
+
+    .next {
+      top: 45%;
+      right: -66px;
+
+      background-size: 36px 72px;
+    }
+
+    &__item {
+      width: 272px !important;
+      height: 344px;
+    }
+    /*
+    &__item-frame {
+      justify-content: flex-end;
+      border-width: 10px;
+
+      &-1 {
+        &::after {
+          background-image: url('../img/slime-1.png');
+          width: 188px;
+          height: 140px;
+
+          top: -15px;
+          left: -5px;
+        }
+      }
+
+      &-2 {
+        &::before {
+          background-image: url('../img/slime-22.png');
+          width: 46px;
+          height: 52px;
+
+          bottom: 50%;
+          right: 10%;
+        }
+
+        &::after {
+          background-image: url('../img/slime-2.png');
+
+          width: 187px;
+          height: 175px;
+
+          bottom: -15px;
+          right: -10px;
+        }
+      }
+
+      &-3 {
+        &::before {
+          background-image: url('../img/slime-33.png');
+
+          width: 118px;
+          height: 80px;
+
+          bottom: -10px;
+          left: -10px;
+        }
+
+        &::after {
+          background-image: url('../img/slime-3.png');
+
+          width: 199px;
+          height: 131px;
+
+          top: -10px;
+          right: -20px;
+        }
+      }
+    }
+
+    &__item-pic {
+      z-index: 2;
+      align-self: flex-end;
+
+      &-1 {
+        width: 243px;
+        min-width: 243px;
+        max-width: 243px;
+        height: 429px;
+      }
+
+      &-2 {
+        width: 288px;
+        min-width: 288px;
+        max-width: 288px;
+        height: 431px;
+      }
+
+      &-3 {
+        align-self: center;
+        width: 215px;
+        min-width: 215px;
+        max-width: 215px;
+        height: 388px;
+      }
+    }
+
+    &__item-name {
+      font-size: 1.375em;
+
+      padding: 17px 26px;
+
+      z-index: 3;
+
+      &-1 {
+        top: 50%;
+        left: 7%;
+
+        transform: rotate(3deg);
+      }
+
+      &-2 {
+        top: 50%;
+        right: 7%;
+
+        transform: rotate(-7deg);
+      }
+
+      &-3 {
+        top: 55%;
+        left: 10%;
+
+        transform: rotate(-3deg);
+      }
+    }*/
   }
 }

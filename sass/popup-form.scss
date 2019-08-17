@@ -102,3 +102,47 @@
     }
   }
 }
+
+
+@media only screen and (min-width: $laptop) {
+  .popup-form {
+    &__wrapper {
+      width: 324px;
+      padding: 20px 24px;
+    }
+
+    &__close {
+      width: 32px;
+      height: 32px;
+
+      background-size: 16px 16px;
+    }
+
+    &__title {
+      font-size: 1em;
+
+      margin-top: 0;
+    }
+
+    &__description {
+      font-size: 0.75em;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .popup-form {
+    &__wrapper {
+      width: 384px;
+      padding: 24px 24px;
+    }
+
+    &__title {
+      font-size: 1.125em;
+    }
+
+    &__description {
+      font-size: 0.875em;
+    }
+  }
+}

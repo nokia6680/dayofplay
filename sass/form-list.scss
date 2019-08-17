@@ -123,25 +123,71 @@
         left: 32px;
       }
     }
-
-    &__checkbox + label {
-      @include checkbox-default;
-    }
-
-    &__checkbox + label::before {
-      @include custom-checkbox;
-    }
-
-    &__checkbox:checked + label::after {
-      @include checkbox-checked;
-    }
   }
 }
 
 @media only screen and (min-width: $laptop) {
+  .form-list {
+    &__item {
+      margin-bottom: 15px;
 
+      &--agreement {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__label,
+    &__title {
+      font-size: 0.625em;
+      margin-bottom: 3px;
+
+      &--checkbox {
+        font-size: 0.55em;
+      }
+    }
+
+    &__input {
+      padding: 5px 5px;
+
+      font-size: 0.875em;
+    }
+
+    &__error {
+      &--required {
+        left: 25px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $widebook-hd) {
+  .form-list {
+    &__item {
+      margin-bottom: 20px;
 
+      &--agreement {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__label,
+    &__title {
+      font-size: 0.75em;
+      margin-bottom: 3px;
+
+      &--checkbox {
+        font-size: 0.55em;
+      }
+    }
+
+    &__input {
+      font-size: 1em;
+    }
+
+    &__error {
+      &--required {
+        left: 32px;
+      }
+    }
+  }
 }

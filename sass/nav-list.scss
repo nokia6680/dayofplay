@@ -85,9 +85,93 @@
 }
 
 @media only screen and (min-width: $laptop) {
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
+    width: 100%;
+
+    position: relative;
+
+    background-color: transparent;
+    top: auto;
+
+    &__item {
+      padding-top: 7px;
+      padding-bottom: 4px;
+      border: none;
+      width: auto;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 4px;
+        height: 4px;
+
+        transform: rotate(-45deg);
+        background-color: #ffd100;
+
+        top: 13px;
+        right: -17px;
+      }
+
+      &:last-of-type {
+        &::after {
+          display: none;
+        }
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent;
+
+        .nav-list__link {
+          color: #073f72;
+          transition: 0.2s ease-in;
+        }
+      }
+    }
+
+    &__link {
+      font-size: 0.875em;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .nav-list {
+    &__item {
+      padding-top: 7px;
+      padding-bottom: 6px;
+
+      &::after {
+        right: -35px;
+        top: 14px;
+      }
+    }
+
+    &__link {
+      font-size: 1em;
+    }
+  }
 }
 
 @media only screen and (min-width: $widebook-hd) {
+  .nav-list {
+    &__item {
+      padding-top: 16px;
+      padding-bottom: 12px;
 
+      &::after {
+        right: -32px;
+        top: 22px;
+      }
+    }
+  }
 }

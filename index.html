@@ -17,153 +17,168 @@
 </head>
 
 <body class="body">
-	<!--First page section-->
-	<section class="section main__index index" id="section00">
-		<!--Header-->
-		<header class="header">
-			<nav class="header__nav header-nav">
-				<!--Logo for mobile devices-->
-				<div class="header-nav__logo">
-					<a class="header-nav__logo-link" href="#" target="_self">
-						<img class="header-nav__logo-img" src="img/main-logo.png" alt="День, когда пора играть!" />
-					</a>
-				</div>
-				<div class="header-nav__layout">
-					<ul class="header-nav__list nav-list">
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="#" target="_self">Купить билет</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="#" target="_self">О празднике</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="#" target="_self">Конкурс</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="#" target="_self">Место проведения</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="#" target="_self">Чем заняться</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="#" target="_self">Кое-что новое</a>
-						</li>
-					</ul>
-				</div>
-				<button class="header-nav__btn header-nav__btn--open" type="button"></button>
-				<button class="header-nav__btn header-nav__btn--close hidden" type="button"></button>
-			</nav>
-		</header>
-		<!--Second on mobile-->
-		<div class="index__intro intro">
-				<div class="intro__logo">
-					<a class="intro__logo-link" href="#" target="_self">
-						<img class="intro__logo-img" src="img/main-logo.svg" alt="День, когда пора играть!" />
-					</a>
-				</div>
-				<div class="intro__details">
-					<img class="intro__details-pic" src="img/team-bg.png" alt="XO Life" />
-					<h3 class="intro__details-date"><span class="intro__details-date-text">15 сентября</span></h3>
-					<b class="intro__details-time"><span class="intro__details-time-text">10:00 МСК</span></b>
+	<!--Header-->
+	<header class="header">
+		<nav class="header__nav header-nav">
+			<!--Logo for mobile devices-->
+			<div class="header-nav__logo">
+				<a class="header-nav__logo-link" href="#" target="_self">
+					<img class="header-nav__logo-img" src="img/main-logo.png" alt="День, когда пора играть!" />
+				</a>
+			</div>
+			<div class="header-nav__layout">
+				<ul class="header-nav__list nav-list">
+					<li class="nav-list__item">
+						<a class="nav-list__link" href="#" target="_self">Купить билет</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link" href="#" target="_self">О празднике</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link" href="#" target="_self">Конкурс</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link" href="#" target="_self">Место проведения</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link" href="#" target="_self">Чем заняться</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link" href="#" target="_self">Кое-что новое</a>
+					</li>
+				</ul>
+			</div>
+			<button class="header-nav__btn header-nav__btn--open" type="button"></button>
+			<button class="header-nav__btn header-nav__btn--close hidden" type="button"></button>
+		</nav>
+	</header>
+	<!--Main-->
+	<main class="main" id="main">
+		<!--First page section-->
+		<section class="section main__index index" id="section00">
+			<div class="index__wrapper">
+				<!--Second on mobile-->
+				<div class="index__intro intro">
+						<div class="intro__logo">
+							<a class="intro__logo-link" href="#" target="_self">
+								<img class="intro__logo-img" src="img/main-logo.png" alt="День, когда пора играть!" />
+							</a>
+						</div>
+						<div class="intro__details">
+							<img class="intro__details-pic" src="img/team-bg.png" alt="XO Life" />
+							<h3 class="intro__details-date"><span class="intro__details-date-text">15 сентября</span></h3>
+							<b class="intro__details-time"><span class="intro__details-time-text">10:00 МСК</span></b>
+						</div>
+					</div>
+				<!--First on mobile-->
+				<div class="index__info info">
+						<div class="info__description">
+							<p class="info__description-text">15 сентября мы выключим эфир, чтобы встретиться с тобой и блогерами XO Life!</p>
+						</div>
+						<div class="info__event">
+							<p class="info__event-text">А если ты из другого города, у тебя есть шанс выиграть поездку в Москву и билеты на праздник!</p>
+						</div>
+						<!--Hidden on mobile-->
+						<a class="info__btn" href="#section01" target="_self">Участвовать в конкурсе!</a>
+					</div>
+				<!--Mobile device controls block-->
+				<div class="index__controls">
+					<a class="index__controls-btn index__controls-btn--buy" href="#" target="_blank">Купить билет</a>
+					<a class="index__controls-btn index__controls-btn--event" href="#section01" target="_self">Участвовать в конкурсе!</a>
 				</div>
 			</div>
-		<!--First on mobile-->
-		<div class="index__info info">
-				<div class="info__description">
-					<p class="info__description-text">15 сентября мы выключим эфир, чтобы встретиться с тобой и блогерами XO Life!</p>
+			<a class="index__btn page-btn" href="#section01" target="_self">
+				<img class="index__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
+			</a>
+		</section>
+		<!--Second page section-->
+		<section class="section main__event event" id="section01">
+			<div class="event__wrapper">
+				<div class="event__info">
+					<h2 class="event__info-title">Хочешь попасть на праздник?</h2>
+					<p class="event__info-description">Выбери с кем из XO Life ты хотел бы попасть под слайм и расскажи почему!</p>
+					<p class="event__info-description">Автор лучшего сочинения выиграет поездку в Москву на День, когда пора играть!</p>
 				</div>
-				<div class="info__event">
-					<p class="info__event-text">А если ты из другого города, у тебя есть шанс выиграть поездку в Москву и билеты на праздник!</p>
+				<!--Блок слайдера-->
+				<div class="event__slider slider">
+					<!--Single slide-->
+					<div class="slider__item slider__item-1">
+						<img class="slider__item-photo" src="img/andrey_ray_1.png" alt="Andrey Ray" />
+						<!--<div class="slider__item-frame slider__item-frame-1">
+							<img class="slider__item-pic slider__item-pic-1" src="img/hero-1.png" alt="Ева Миллер" />
+							<b class="slider__item-name slider__item-name-1">Eva Miller</b>
+						</div>-->
+					</div>
+					<!--Single slide-->
+					<div class="slider__item slider__item-2">
+						<img class="slider__item-photo" src="img/eva_miller_1.png" alt="Eva Miller" />
+						<!--<div class="slider__item-frame slider__item-frame-2">
+							<img class="slider__item-pic slider__item-pic-2" src="img/hero-2.png" alt="Гэри" />
+							<b class="slider__item-name slider__item-name-2">Gary</b>
+						</div>-->
+					</div>
+					<!--Single slide-->
+					<div class="slider__item slider__item-3">
+						<img class="slider__item-photo" src="img/faya_1.png" alt="Faya" />
+						<!--<div class="slider__item-frame slider__item-frame-3">
+							<img class="slider__item-pic slider__item-pic-3" src="img/hero-3.png" alt="Марк Макаров" />
+							<b class="slider__item-name slider__item-name-3">Mark Makarov</b>
+						</div>-->
+					</div>
+					<!--Single slide-->
+					<div class="slider__item slider__item-4">
+						<img class="slider__item-photo" src="img/gary_1.png" alt="Gary" />
+						<!--<div class="slider__item-frame slider__item-frame-2">
+							<img class="slider__item-pic" src="img/hero-4.png" alt="" />
+							<b class="slider__item-name slider__item-name-2">Имя</b>
+						</div>-->
+					</div>
+					<!--Single slide-->
+					<div class="slider__item slider__item-5">
+						<img class="slider__item-photo" src="img/mark_makarov_1.png" alt="Mark Makarov" />
+						<!--<div class="slider__item-frame slider__item-frame-1">
+							<img class="slider__item-pic" src="img/hero-5.png" alt="" />
+							<b class="slider__item-name slider__item-name-1">Имя</b>
+						</div>-->
+					</div>
+					<!--Single slide-->
+					<div class="slider__item slider__item-6">
+						<img class="slider__item-photo" src="img/mary_senn_1.png" alt="Mary Senn" />
+						<!--<div class="slider__item-frame slider__item-frame-3">
+							<img class="slider__item-pic" src="img/hero-6.png" alt="" />
+							<b class="slider__item-name slider__item-name-3">Имя</b>
+						</div>-->
+					</div>
+					<!--Single slide-->
+					<div class="slider__item slider__item-7">
+						<img class="slider__item-photo" src="img/nastya_miany_1.png" alt="Nastya Miany" />
+						<!--<div class="slider__item-frame slider__item-frame-2">
+							<img class="slider__item-pic" src="img/hero-7.png" alt="" />
+							<b class="slider__item-name slider__item-name-1">Имя</b>
+						</div>-->
+					</div>
+					<!--Single slide-->
+					<div class="slider__item slider__item-8">
+						<img class="slider__item-photo" src="img/tim_1.png" alt="Tim" />
+						<!--<div class="slider__item-frame slider__item-frame-3">
+							<img class="slider__item-pic" src="img/hero-8.png" alt="" />
+							<b class="slider__item-name slider__item-name-3">Имя</b>
+						</div>-->
+					</div>
+					<!--
+					<div class="slider__item slider__item-9">
+						<img class="slider__item-photo" src="img/andrey_ray_1.png" alt="Andrey Ray" />
+						<div class="slider__item-frame slider__item-frame-1">
+							<img class="slider__item-pic" src="img/hero-9.png" alt="" />
+							<b class="slider__item-name slider__item-name-2">Имя</b>
+						</div>
+					</div>-->
 				</div>
-				<!--Hidden on mobile-->
-				<a class="info__btn" href="#event" target="_self">Участвовать в конкурсе!</a>
+				<div class="prev"></div>
+				<div class="next"></div>
 			</div>
-		<!--Mobile device controls block-->
-		<div class="index__controls">
-			<a class="index__controls-btn index__controls-btn--buy" href="#" target="_blank">Купить билет</a>
-			<a class="index__controls-btn index__controls-btn--event" href="#section01" target="_self">Участвовать в конкурсе!</a>
-		</div>
-		<a class="index__btn page-btn" href="#section01" target="_self">
-			<img class="index__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
-		</a>
-	</section>
-	<!--Second page section-->
-	<section class="section main__event event" id="section01">
-		<div class="event__wrapper">
-			<div class="event__info">
-				<h2 class="event__info-title">Хочешь попасть на праздник?</h2>
-				<p class="event__info-description"> Выбери с кем из XO Life ты хотел бы попасть под слайм и расскажи почему! Автор лучшего сочинения выиграет поездку в Москву на День, когда пора играть!</p>
-			</div>
-			<!--Блок слайдера-->
-			<div class="event__slider slider">
-				<!--Single slide-->
-				<div class="slider__item slider__item-1">
-					<div class="slider__item-frame slider__item-frame-1">
-						<img class="slider__item-pic slider__item-pic-1" src="img/hero-1.png" alt="Ева Миллер" />
-						<b class="slider__item-name slider__item-name-1">Eva Miller</b>
-					</div>
-				</div>
-				<!--Single slide-->
-				<div class="slider__item slider__item-2">
-					<div class="slider__item-frame slider__item-frame-2">
-						<img class="slider__item-pic slider__item-pic-2" src="img/hero-2.png" alt="Гэри" />
-						<b class="slider__item-name slider__item-name-2">Gary</b>
-					</div>
-				</div>
-				<!--Single slide-->
-				<div class="slider__item slider__item-3">
-					<div class="slider__item-frame slider__item-frame-3">
-						<img class="slider__item-pic slider__item-pic-3" src="img/hero-3.png" alt="Марк Макаров" />
-						<b class="slider__item-name slider__item-name-3">Mark Makarov</b>
-					</div>
-				</div>
-				<!--Single slide-->
-				<div class="slider__item slider__item-4">
-					<div class="slider__item-frame slider__item-frame-2">
-						<img class="slider__item-pic" src="img/hero-4.png" alt="" />
-						<b class="slider__item-name slider__item-name-2">Имя</b>
-					</div>
-				</div>
-				<!--Single slide-->
-				<div class="slider__item slider__item-5">
-					<div class="slider__item-frame slider__item-frame-1">
-						<img class="slider__item-pic" src="img/hero-5.png" alt="" />
-						<b class="slider__item-name slider__item-name-1">Имя</b>
-					</div>
-				</div>
-				<!--Single slide-->
-				<div class="slider__item slider__item-6">
-					<div class="slider__item-frame slider__item-frame-3">
-						<img class="slider__item-pic" src="img/hero-6.png" alt="" />
-						<b class="slider__item-name slider__item-name-3">Имя</b>
-					</div>
-				</div>
-				<!--Single slide-->
-				<div class="slider__item slider__item-7">
-					<div class="slider__item-frame slider__item-frame-2">
-						<img class="slider__item-pic" src="img/hero-7.png" alt="" />
-						<b class="slider__item-name slider__item-name-1">Имя</b>
-					</div>
-				</div>
-				<!--Single slide-->
-				<div class="slider__item slider__item-8">
-					<div class="slider__item-frame slider__item-frame-3">
-						<img class="slider__item-pic" src="img/hero-8.png" alt="" />
-						<b class="slider__item-name slider__item-name-3">Имя</b>
-					</div>
-				</div>
-				<!--Single slide-->
-				<div class="slider__item slider__item-9">
-					<div class="slider__item-frame slider__item-frame-1">
-						<img class="slider__item-pic" src="img/hero-9.png" alt="" />
-						<b class="slider__item-name slider__item-name-2">Имя</b>
-					</div>
-				</div>
-			</div>
-			<div class="prev"></div>
-			<div class="next"></div>
-		</div>
-	</section>
+		</section>
+	</main>
 	<!--Footer-->
 	<footer class="footer">
 		<nav class="footer__nav footer-nav">

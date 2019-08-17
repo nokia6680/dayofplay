@@ -19,6 +19,7 @@
     width: 100%;
 
     border: 2px solid #aab7b9;
+    background-color: transparent;
 
     resize: none;
 
@@ -67,6 +68,58 @@
 }
 
 @media only screen and (min-width: $hdm) {
+  .main-form {
+    &__description {
+      font-size: 0.875em;
+
+      max-width: 300px;
+      margin-bottom: 11px;
+    }
+
+    &__textarea {
+      margin-bottom: 14px;
+
+      font-size: 1em;
+
+      padding: 8px 8px;
+
+      max-height: 104px;
+      min-height: 104px;
+    }
+
+    &__submit {
+      font-size: 1.125em;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .main-form {
+    &__description {
+      font-size: 0.75em;
+
+      max-width: 250px;
+      margin-bottom: 10px;
+    }
+
+    &__textarea {
+      margin-bottom: 8px;
+
+      font-size: 0.875em;
+
+      padding: 8px 8px;
+
+      max-height: 90px;
+      min-height: 90px;
+    }
+
+    &__submit {
+      font-size: 1em;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
   .main-form {
     &__description {
       font-size: 0.875em;

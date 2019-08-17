@@ -108,17 +108,145 @@
   }
 }
 @media only screen and (min-width: $laptop) {
+  .intro {
+    width: 50%;
+    max-width: 632px;
+    transition: 0.2s ease-in;
 
+    &__logo {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      align-self: flex-start;
+
+      width: 307px;
+      height: 144px;
+    }
+
+    &__details {
+      margin-bottom: 0;
+      margin-top: -10px;
+      align-self: flex-end;
+    }
+
+    &__details-pic {
+      width: 401px;
+      height: 282px;
+    }
+
+    &__details-date {
+      width: 338px;
+      height: 67px;
+      margin-top: -67px;
+
+      &-text {
+        font-size: 2.125em;
+      }
+    }
+
+    &__details-time {
+      width: 140px;
+      min-height: 32px;
+      height: 32px;
+      margin-top: -30px;
+      margin-left: 120px;
+
+      &-text {
+        font-size: 1.125em;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $laptop-wide) {
+  .intro {
+    max-width: 620px;
+    transition: 0.2s ease-in;
 
+    margin-right: 70px;
+
+    &__details {
+      margin-bottom: 0;
+      margin-top: -40px;
+      margin-right: -64px;
+      align-self: flex-end;
+    }
+
+    &__details-pic {
+      width: 502px;
+      height: 353px;
+    }
+
+    &__details-date {
+      width: 405px;
+      height: 84px;
+      margin-top: -84px;
+
+      &-text {
+        font-size: 2.875em;
+      }
+    }
+
+    &__details-time {
+      width: 175px;
+      min-height: 41px;
+      height: 41px;
+      margin-top: -35px;
+
+      &-text {
+        font-size: 1.25em;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $widebook-hd) {
+  .intro {
+    max-width: 633px;
+    min-width: 633px;
 
-}
+    margin-right: 20px;
 
-@media only screen and (min-width: $hd) {
+    &__logo {
+      min-width: 379px;
+      max-width: 379px;
+      height: 178px;
+    }
 
+    &__details {
+      margin-bottom: 0;
+      margin-top: -10px;
+      margin-right: 0;
+      margin-left: 0;
+      align-self: flex-end;
+    }
+
+    &__details-pic {
+      width: 633px;
+      min-width: 633px;
+      height: 445px;
+    }
+
+    &__details-date {
+      width: 538px;
+      height: 107px;
+      margin-top: -110px;
+
+      &-text {
+        font-size: 3.875em;
+      }
+    }
+
+    &__details-time {
+      width: 235px;
+      min-height: 54px;
+      height: 54px;
+      margin-top: -35px;
+
+      &-text {
+        font-size: 1.875em;
+      }
+    }
+  }
 }
