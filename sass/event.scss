@@ -19,13 +19,14 @@
   &__info {
     @include flex-setting(column, flex-start, center);
     width: 100%;
+    margin-bottom: 20px;
   }
 
   &__info-title {
     @include flex-setting(column, center, center);
-    @include font-setting($primary-font, 0.875em, 1.2, 900, #fff7df);
+    @include font-setting($primary-font, 0.75em, 1.2, 900, #fff7df);
 
-    width: 300px;
+    width: 310px;
     padding-top: 5px;
     padding-bottom: 5px;
 
@@ -37,17 +38,26 @@
     text-align: center;
   }
 
-  &__info-description {
-    max-width: 300px;
+  &__info-wrap {
+    @include flex-setting(column, center, center);
 
-    @include font-setting($primary-font, 0.625em, 1.2, 900, #073f72);
+    background-color: #fff7df;
+    box-shadow: -3px 3px 0 #073f72;
+
+    width: 300px;
+    height: 65px;
+  }
+
+  &__info-description {
+    max-width: 290px;
+
+    @include font-setting($primary-font, 0.6em, 1.2, 900, #073f72);
 
     letter-spacing: 0.32px;
     text-transform: uppercase;
     text-align: center;
 
     margin: 0;
-    margin-bottom: 10px;
   }
 }
 
@@ -56,17 +66,21 @@
     padding-top: 10px;
 
     &__info-title {
-      font-size: 1em;
+      font-size: 0.875em;
 
-      width: 340px;
+      width: 360px;
       padding-top: 8px;
       padding-bottom: 8px;
     }
 
-    &__info-description {
-      max-width: 350px;
+    &__info-wrap {
+      width: 340px;
+    }
 
-      font-size: 0.75em;
+    &__info-description {
+      max-width: 320px;
+
+      font-size: 0.625em;
     }
   }
 }
@@ -76,18 +90,23 @@
     padding-top: 10px;
 
     &__info-title {
-      font-size: 1.125em;
+      font-size: 1em;
 
-      width: 380px;
+      width: 400px;
       padding-top: 10px;
       padding-bottom: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
+    }
+
+    &__info-wrap {
+      width: 400px;
+      height: 70px;
     }
 
     &__info-description {
-      max-width: 400px;
+      max-width: 390px;
 
-      font-size: 0.75em;
+      font-size: 0.68em;
     }
   }
 }
@@ -98,20 +117,25 @@
     padding-top: 116px;
 
     &__info-title {
-      font-size: 1.625em;
+      font-size: 1.563em;
       letter-spacing: 0.6px;
 
-      width: 560px;
+      width: 640px;
       padding-top: 8px;
       padding-bottom: 8px;
-      margin-bottom: 11px;
+      margin-bottom: 20px;
+    }
+
+    &__info-wrap {
+      width: 656px;
+      height: 76px;
     }
 
     &__info-description {
-      max-width: 560px;
+      max-width: 620px;
       line-height: 1.4;
       letter-spacing: 0.32px;
-      font-size: 0.875em;
+      font-size: 0.812em;
     }
   }
 }
@@ -119,19 +143,28 @@
   .event {
     background-image: url('../img/fruits-big.png'), url('../img/second-bg.png');
     background-position: top 50% left, top center;
-    padding-top: 26px;
+    padding-top: 20px;
 
     &__info-title {
       font-size: 1.5em;
       letter-spacing: 0.55px;
 
-      width: 538px;
+      width: 650px;
       margin-bottom: 18px;
     }
 
+    &__info-wrap {
+      width: 600px;
+
+      height: 140px;
+      max-height: 140px;
+      transform: rotate(-1deg);
+    }
+
     &__info-description {
-      max-width: 460px;
-      margin-bottom: 15px;
+      max-width: 540px;
+      font-size: 1.125em;
+      transform: rotate(1deg);
     }
   }
 }
@@ -158,14 +191,19 @@
       padding-top: 12px;
       padding-bottom: 12px;
 
-      width: 672px;
+      width: 816px;
       margin-bottom: 26px;
     }
 
+    &__info-wrap {
+      width: 747px;
+      height: 161px;
+    }
+
     &__info-description {
-      max-width: 540px;
-      font-size: 1.125em;
-      margin-bottom: 24px;
+      max-width: 700px;
+      font-size: 1.25em;
+      margin-bottom: 0;
     }
   }
 }

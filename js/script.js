@@ -43,7 +43,7 @@ if (menuText) {
 }
 
 $(".slider").slick({
-  infinite: false,
+  infinite: true,
   initialSlide: 0,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -55,7 +55,7 @@ $(".slider").slick({
   responsive: [{
       breakpoint: 9999,
       settings: {
-        infinite: false,
+        infinite: true,
         initialSlide: 0,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -68,7 +68,7 @@ $(".slider").slick({
     {
       breakpoint: 1024,
       settings: {
-        infinite: false,
+        infinite: true,
         initialSlide: 0,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -96,4 +96,33 @@ $(document).ready(function(){
 		//анимируем переход на расстояние - top за 1500 мс
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
+
+  $('.slider__item').click(function(){
+    pers = $(this).find('.slider__item-photo').attr('alt');
+    $('.popup-form').css('display','flex');
+    $('.popup-form__name').html(pers);
+    $('input[name="pers"]').val(pers);
+  });
+
+  $('.popup-form__close').click(function(){
+    $('.popup-form').css('display','none');
+  });
+  $('.popup-done__close').click(function(){
+    $('.popup-done').css('display','none');
+  });
+
+  $('.main-form').submit(function(){
+
+    var $form = $('.main-form');
+
+    $.post($form.attr('action'), $form.serialize(), function(data){
+
+        $('[name="name"],[name="tel"],[name="esse"]').val('');
+
+        $('.popup-form').css('display','none');
+        $('.popup-done').css('display','flex');
+    });
+
+    return false;
+  });
 });

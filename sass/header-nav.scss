@@ -1,5 +1,5 @@
 .header-nav {
-  @include flex-setting(row, space-between, flex-start);
+  @include flex-setting(row, flex-start, flex-start);
 
   width: 100%;
 
@@ -11,6 +11,8 @@
 
   &__layout {
     @include flex-setting(column, flex-start, center);
+    /*УБРАТЬ ПОСЛЕ ПОЯВЛЕНИЯ МЕНЮ*/
+    display: none;
     position: absolute;
     top: -1000px;
     left: 0;
@@ -59,7 +61,7 @@
   }
 
   &__btn {
-    display: inline-flex;
+    display: none;
     width: 42px;
     height: 42px;
     border: none;
@@ -91,7 +93,7 @@
   .header-nav {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
 
     height: 80px;
 

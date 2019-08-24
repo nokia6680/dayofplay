@@ -15,7 +15,7 @@
 
     position: relative;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &__details-date {
@@ -36,25 +36,27 @@
     letter-spacing: 1.38px;
     transform: rotate(-2deg);
     text-shadow: 2px 2px 0 #073f72;
+    text-transform: uppercase;
   }
 
   &__details-time {
     @include flex-setting(column, center, center);
-    width: 117px;
+    width: 220px;
     height: 27px;
 
-    margin-left: 90px;
+    margin-left: 10px;
     margin-top: -30px;
 
-    background-image: url('../img/details-time-bg.png');
+    background-image: url('../img/time-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
 
   &__details-time-text {
-    @include font-setting($primary-font, 1em, 1.2, 900, #fff7df);
+    @include font-setting($primary-font, 0.875em, 1.2, 900, #fff7df);
     letter-spacing: 0.69px;
+    text-transform: uppercase;
   }
 }
 
@@ -83,7 +85,7 @@
     }
 
     &__details-date {
-      width: 466px;
+      width: 484px;
       height: 98px;
       margin-top: -95px;
 
@@ -94,11 +96,11 @@
     }
 
     &__details-time {
-      width: 162px;
+      width: 375px;
       min-height: 38px;
       height: 38px;
       margin-top: -35px;
-      margin-left: 120px;
+      margin-left: 10px;
 
       &-text {
         font-size: 1.375em;
@@ -146,11 +148,10 @@
     }
 
     &__details-time {
-      width: 140px;
+      width: 300px;
       min-height: 32px;
       height: 32px;
       margin-top: -30px;
-      margin-left: 120px;
 
       &-text {
         font-size: 1.125em;
@@ -179,7 +180,7 @@
     }
 
     &__details-date {
-      width: 405px;
+      width: 444px;
       height: 84px;
       margin-top: -84px;
 
@@ -189,10 +190,10 @@
     }
 
     &__details-time {
-      width: 175px;
+      width: 340px;
       min-height: 41px;
       height: 41px;
-      margin-top: -35px;
+      margin-top: -30px;
 
       &-text {
         font-size: 1.25em;
@@ -229,23 +230,23 @@
     }
 
     &__details-date {
-      width: 538px;
-      height: 107px;
-      margin-top: -110px;
+      width: 608px;
+      height: 110px;
+      margin-top: -100px;
 
       &-text {
-        font-size: 3.875em;
+        font-size: 3.75em;
       }
     }
 
     &__details-time {
-      width: 235px;
+      width: 399px;
       min-height: 54px;
       height: 54px;
       margin-top: -35px;
 
       &-text {
-        font-size: 1.875em;
+        font-size: 1.5em;
       }
     }
   }

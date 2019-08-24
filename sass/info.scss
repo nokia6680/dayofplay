@@ -9,7 +9,7 @@
     background-color: #073f72;
     box-shadow: 2px 2px 0 #00c5df;
 
-    width: 280px;
+    width: 300px;
 
     @include flex-setting(column, center, center);
 
@@ -17,9 +17,9 @@
       text-align: center;
       text-transform: uppercase;
 
-      @include font-setting($primary-font, 0.875em, 1.2, 700, #fff7df);
+      @include font-setting($primary-font, 0.72em, 1.2, 700, #fff7df);
 
-      max-width: 270px;
+      max-width: 290px;
     }
   }
 
@@ -30,9 +30,9 @@
       text-align: center;
       text-transform: uppercase;
 
-      @include font-setting($primary-font, 0.75em, 1.2, 700, #073f72);
+      @include font-setting($primary-font, 0.65em, 1.2, 700, #073f72);
 
-      margin-top: 3px;
+      margin-top: 5px;
       margin-bottom: 3px;
 
       max-width: 280px;
@@ -46,22 +46,22 @@
 
 @media only screen and (min-width: $mobile) {
   .info {
-    max-width: 340px;
+    max-width: 360px;
     margin-top: 0;
 
     &__description {
-      width: 300px;
+      width: 340px;
 
       &-text {
-        font-size: 1em;
-        max-width: 280px;
+        font-size: 0.75em;
+        max-width: 320px;
       }
     }
 
     &__event {
       &-text {
-        font-size: 0.875em;
-        max-width: 300px;
+        font-size: 0.75em;
+        max-width: 340px;
         margin-top: 5px;
         margin-bottom: 5px;
       }
@@ -75,17 +75,21 @@
     margin-top: 0;
 
     &__description {
-      width: 340px;
+      width: 380px;
+      padding-top: 5px;
+      padding-bottom: 5px;
 
       &-text {
-        font-size: 1.125em;
-        max-width: 300px;
+        font-size: 0.875em;
+        max-width: 340px;
+
+        margin: 0;
       }
     }
 
     &__event {
       &-text {
-        max-width: 320px;
+        max-width: 340px;
         margin-top: 5px;
         margin-bottom: 5px;
       }
@@ -104,7 +108,8 @@
 
       &-text {
         font-size: 1.125em;
-        max-width: 600px;
+        line-height: 1.4;
+        max-width: 630px;
         transition: 0.2s ease-in;
       }
     }
@@ -113,6 +118,7 @@
       &-text {
         font-size: 0.875em;
         max-width: 500px;
+        line-height: 1.4;
         margin-top: 7px;
         margin-bottom: 7px;
         transition: 0.2s ease-in;
@@ -146,8 +152,8 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
 
-        top: -20px;
-        right: -20px;
+        top: -30px;
+        right: -30px;
       }
 
       &::before {
@@ -170,13 +176,15 @@
         font-size: 1.5em;
         max-width: 450px;
         transition: 0.2s ease-in;
+
+        transform: rotate(1deg);
       }
     }
 
     &__event {
       &-text {
         font-size: 1.125em;
-        max-width: 400px;
+        max-width: 440px;
         margin-top: 20px;
         margin-bottom: 24px;
         transition: 0.2s ease-in;
@@ -185,9 +193,9 @@
 
     &__btn {
       @include flex-setting(column, center, center);
-      @include font-setting($primary-font, 1.125em, 1.2, 900, #ffffff);
+      @include font-setting($primary-font, 2em, 1.2, 900, #ffffff);
 
-      width: 356px;
+      width: 272px;
       height: 57px;
 
       background-color: #ff6700;
@@ -236,8 +244,8 @@
       &::after {
         width: 96px;
         height: 100px;
-        top: -30px;
-        right: -30px;
+        top: -70px;
+        right: -50px;
       }
 
       &::before {
@@ -248,17 +256,18 @@
       }
 
       &-text {
-        max-width: 470px;
-        font-size: 2em;
+        max-width: 528px;
+        font-size: 1.625em;
       }
     }
 
     &__event {
-      margin-bottom: 30px;
-      
+      margin-bottom: 0px;
+
       &-text {
         max-width: 528px;
-        font-size: 1.375em;
+        font-size: 1.5em;
+        margin-bottom: 15px;
       }
     }
   }
