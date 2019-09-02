@@ -1,0 +1,302 @@
+.program {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+
+  background-image:  url('../img/program-bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  &__wrapper {
+    @include flex-setting(column, flex-start, flex-start);
+
+    margin: 0 10px;
+    padding-top: 10px;
+
+    overflow: visible;
+  }
+
+  &__title {
+    @include font-setting($primary-font, 0.875em, 1, 900, #073f72);
+
+    letter-spacing: 0.74px;
+    text-transform: uppercase;
+
+    background-color: #ffd100;
+    box-shadow: 3px 3px 0 #ffffff;
+    @include flex-setting(column, center, center);
+
+    width: 200px;
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &--second {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/turtle.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 111px;
+        height: 110px;
+
+        top: 25px;
+        left: -60px;
+
+        z-index: 1;
+      }
+    }
+  }
+
+  &__btn {
+    width: 20px;
+    height: 10px;
+
+    text-transform: none;
+    margin-top: 25px;
+    margin-bottom: 5px;
+
+    &-pic {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .program {
+    &__wrapper {
+      width: 340px;
+      margin: 0 10px;
+    }
+
+    &__title {
+      font-size: 1em;
+      width: 240px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .program {
+    &__wrapper {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 1.25em;
+      width: 280px;
+      margin-bottom: 20px;
+
+      &--second {
+        position: relative;
+
+        &::before {
+          width: 166px;
+          height: 165px;
+
+          top: 25px;
+          left: -70px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) and (min-device-height: 700px){
+  .program {
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .program {
+    position: relative;
+
+    &__wrapper {
+      width: 100%;
+      padding-left: 48px;
+      padding-right: 48px;
+      margin: 0 auto;
+
+      padding-top: 16px;
+    }
+
+    &__title {
+      font-size: 2em;
+      width: auto;
+      max-width: 434px;
+      margin-bottom: 58px;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      &--second {
+        position: relative;
+
+        &::before {
+          width: 222px;
+          height: 221px;
+
+          top: 70px;
+          left: -40px;
+        }
+      }
+    }
+
+    &__btn {
+      width: 40px;
+      height: 20px;
+
+      margin-top: -150px;
+      z-index: 10;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .program {
+    position: relative;
+
+    background-image: url('../img/program-clouds.png'), url('../img/program-bg.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 60% center, top center;
+    background-size: 100%, cover;
+
+    &__wrapper {
+      width: 100%;
+      padding-left: 48px;
+      padding-right: 48px;
+      margin: 0 auto;
+
+      padding-top: 48px;
+
+      position: relative;
+    }
+
+    &__title {
+      font-size: 2em;
+      width: auto;
+      max-width: 100%;
+      margin-bottom: 30px;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      align-self: center;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/center-figures.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 175px;
+        height: 315px;
+
+        top: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 0;
+      }
+
+      &--second {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &__btn {
+      width: 40px;
+      height: 20px;
+
+      margin-top: -70px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .program {
+    background-image:  url('../img/program-clouds.png'), url('../img/program-bg.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 60% center, top center;
+    background-size: 100%, cover;
+
+    &__btn {
+      margin-top: -70px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-sm) {
+  .program {
+    padding-top: 72px;
+
+    background-image: url('../img/program-clouds.png'), url('../img/program-bg.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 60% center, top center;
+    background-size: 100%, cover;
+
+    &__wrapper {
+      padding-top: 0;
+    }
+
+    &__btn {
+      width: 40px;
+      height: 20px;
+
+      margin-top: -60px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .program {
+    background-position: top 60% center, top center;
+    background-size: 100%, cover;
+
+    &__wrapper {
+      padding-top: 0;
+    }
+
+    &__title {
+      &::after {
+        width: 234px;
+        height: 421px;
+        z-index: 1;
+      }
+    }
+
+    &__btn {
+      width: 40px;
+      height: 20px;
+
+      margin-top: -20px;
+    }
+  }
+}

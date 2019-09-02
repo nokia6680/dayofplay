@@ -49,8 +49,6 @@
       background-color: #40b92f;
       box-shadow: 4px 4px 0 #073f72;
       margin-right: 10px;
-
-      display: none;
     }
 
     &--event {
@@ -66,6 +64,10 @@
 
     text-transform: none;
     margin-bottom: 5px;
+
+    &--text {
+      display: none;
+    }
 
     &-pic {
       width: 100%;
@@ -100,6 +102,15 @@
 
     &__controls-btn {
       font-size: 1.25em;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) and (min-device-height: 700px){
+  .index {
+    &__controls {
+      max-width: 380px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -173,14 +184,29 @@
     &__btn {
       order: 3;
       position: absolute;
-      bottom: 70px;
+      bottom: 50px;
       left: 50%;
       transform: translateX(-50%);
 
-      width: 40px;
-      height: 20px;
+      width: 117px;
+      height: 40px;
+
+      text-decoration: none;
 
       margin: 0 auto;
+
+      @include flex-setting(column, flex-start, center);
+
+      &--text {
+        display: inline-flex;
+        margin-bottom: 2px;
+        @include font-setting($primary-font, 0.625em, 1.2, 900, #073f72);
+      }
+
+      &-pic {
+        width: 40px;
+        height: 20px;
+      }
     }
   }
 }
@@ -222,13 +248,10 @@
 
     &__btn {
       position: absolute;
-      bottom: 70px;
+      bottom: 60px;
       left: 50%;
       transform: translateX(-50%);
       order: 3;
-
-      width: 40px;
-      height: 20px;
 
       margin: 0 auto;
     }

@@ -42,6 +42,43 @@ if (menuText) {
   });
 }
 
+//СКРИПТ ЗАПУСКА СЛАЙДЕРА ПРИМЕРОВ
+$(window).on('resize', function(e){
+  // Переменная, по которой узнаем запущен слайдер или нет.
+  // Храним её в data
+  var init = $(".program-slider__wrapper").data('init-slider');
+  // Если мобильный
+  if(window.innerWidth < 1024){
+    // Если слайдер не запущен
+    if(init != 1){
+      // Запускаем слайдер и записываем в data init-slider = 1
+      $('.program-slider__wrapper').slick({
+        infinite: true,
+        initialSlide: 0,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        prevArrow: '<div class="prev-3"></div>',
+        nextArrow: '<div class="next-3"></div>'
+      }).data({'init-slider': 1});
+
+      $('.program-slider__wrapper').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        if (currentSlide > 0) $('.program__title').addClass('program__title--second');
+        else $('.program__title').removeClass('program__title--second');
+      });
+    }
+  }
+  // Если десктоп
+  else {
+    // Если слайдер запущен
+    if(init == 1){
+      // Разрушаем слайдер и записываем в data init-slider = 0
+      $('.program-slider__wrapper').slick('unslick').data({'init-slider': 0});
+    }
+  }
+}).trigger('resize');
+
 $(".slider").slick({
   infinite: true,
   initialSlide: 0,
@@ -83,7 +120,7 @@ $(".slider").slick({
 });
 
 $(document).ready(function(){
-	$("#main").on("click","a", function (event) {
+	$("#nav .nav-list__link, #main a").on("click", function (event) {
 		//отменяем стандартную обработку нажатия по ссылке
 		event.preventDefault();
 
@@ -99,6 +136,8 @@ $(document).ready(function(){
 
   $('.slider__item').click(function(){
     pers = $(this).find('.slider__item-photo').attr('alt');
+    gender = $(this).find('.slider__item-photo').data('gender');
+    $('.gender').html(gender);
     $('.popup-form').css('display','flex');
     $('.popup-form__name').html(pers);
     $('input[name="pers"]').val(pers);
@@ -114,13 +153,16 @@ $(document).ready(function(){
   $('.main-form').submit(function(){
 
     var $form = $('.main-form');
-
+    $('.main-form__submit').prop('disabled',true);
+        
     $.post($form.attr('action'), $form.serialize(), function(data){
 
         $('[name="name"],[name="tel"],[name="esse"]').val('');
 
         $('.popup-form').css('display','none');
         $('.popup-done').css('display','flex');
+
+        $('.main-form__submit').prop('disabled',false);
     });
 
     return false;

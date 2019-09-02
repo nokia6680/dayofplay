@@ -42,16 +42,17 @@
 				</a>
 			</div>
 			<div class="header-nav__layout">
-				<ul class="header-nav__list nav-list">
+				<ul class="header-nav__list nav-list" id="nav">
 					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Купить билет</a>
 					</li>
 					<li class="nav-list__item">
-						<a class="nav-list__link" href="#" target="_self">О празднике</a>
+						<a class="nav-list__link" href="#section01" target="_self">О фестивале</a>
 					</li>
 					<li class="nav-list__item">
-						<a class="nav-list__link" href="#" target="_self">Конкурс</a>
+						<a class="nav-list__link" href="#section02" target="_self">Конкурс</a>
 					</li>
+					<!--
 					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Место проведения</a>
 					</li>
@@ -60,7 +61,7 @@
 					</li>
 					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Кое-что новое</a>
-					</li>
+					</li>-->
 				</ul>
 			</div>
 			<button class="header-nav__btn header-nav__btn--open" type="button"></button>
@@ -81,8 +82,9 @@
 						</div>
 						<div class="intro__details">
 							<img class="intro__details-pic" src="img/team-bg.png" alt="XO Life" />
-							<h3 class="intro__details-date"><span class="intro__details-date-text">15 сентября</span></h3>
-							<b class="intro__details-time"><span class="intro__details-time-text">Подробности скоро</span></b>
+							<div class="intro__details-wrap">
+								<img class="intro__details-wrap-img" src="img/details-bg.png" />
+							</div>
 						</div>
 					</div>
 				<!--First on mobile-->
@@ -94,7 +96,10 @@
 							<p class="info__event-text">Выиграй поездку в Москву на День, когда пора играть, чтобы облиться слаймом вместе с любимым блогером!</p>
 						</div>
 						<!--Hidden on mobile-->
-						<a class="info__btn" href="#section01" target="_self">Конкурс</a>
+						<div class="info__buttons">
+							<a class="info__btn info__btn--buy" target="_blank" href="#">Купить билет</a>
+							<a class="info__btn info__btn--event" href="#section02" target="_self">Конкурс</a>
+						</div>
 					</div>
 				<!--Mobile device controls block-->
 				<div class="index__controls">
@@ -103,11 +108,61 @@
 				</div>
 			</div>
 			<a class="index__btn page-btn" href="#section01" target="_self">
+				<span class="index__btn--text">Узнать больше</span>
 				<img class="index__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
 			</a>
 		</section>
+		<!--Third page section-->
+		<section class="section main__program program" id="section01">
+			<div class="program__wrapper">
+				<h2 class="program__title">Что ещё ждёт тебя на фестивале?</h2>
+				<div class="program__slider program-slider">
+					<div class="program-slider__wrapper">
+						<!--Single list-->
+						<ul class="program-slider__list program-list program-list--first">
+							<li class="program-list__item program-list__item--1">
+								<b class="program-list__item-title rotate-right shadow-left">Минигольф «Щенячий патруль»</b>
+								<p class="program-list__item-description">Держи удар и загони все шарики в лунки!</p>
+							</li>
+							<li class="program-list__item program-list__item--2">
+								<b class="program-list__item-title shadow-right">Увлекательные мастер-классы</b>
+								<p class="program-list__item-description">поделки из картона, картины на воде, игрушки своими руками – все это ждёт тебя на чудесных мастер-классах от команды Nickelodeon</p>
+							</li>
+							<li class="program-list__item program-list__item--3">
+								<b class="program-list__item-title rotate-left shadow-right">Комната смеха</b>
+								<p class="program-list__item-description">Причудливые кривые зеркала подарят тебе широкую улыбку!</p>
+							</li>
+							<li class="program-list__item program-list__item--center">
+								<b class="program-list__item-title shadow-left">Гигантская дженга </b>
+								<p class="program-list__item-description">Прояви ловкость, чтобы не уронить гигантскую башню!</p>
+							</li>
+						</ul>
+						<!--Single list-->
+						<ul class="program-slider__list program-list program-list--second">
+							<li class="program-list__item program-list__item--4">
+								<b class="program-list__item-title shadow-left">Тир «Черепашки-ниндзя»</b>
+								<p class="program-list__item-description">Кавабанга! Ждём отважных и метких стрелков в нашем тире!</p>
+							</li>
+							<li class="program-list__item program-list__item--5">
+								<b class="program-list__item-title rotate-left shadow-left">Студия красоты от Nickelodeon</b>
+								<p class="program-list__item-description">примерь на себя образ бесстрашного героя или очаровательной принцессы! В нашей студии красоты будут происходить чудеса преображения!</p>
+							</li>
+							<li class="program-list__item program-list__item--6">
+								<b class="program-list__item-title rotate-right shadow-right">Киностудия от DЕТИКИНО</b>
+								<p class="program-list__item-description">Раскрой свой актерский талант в нашей студии</p>
+							</li>
+						</ul>
+					</div>
+					<div class="prev-3"></div>
+					<div class="next-3"></div>
+				</div>
+			</div>
+			<a class="program__btn page-btn" href="#section02" target="_self">
+				<img class="program__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
+			</a>
+		</section>
 		<!--Second page section-->
-		<section class="section main__event event" id="section01">
+		<section class="section main__event event" id="section02">
 			<div class="event__wrapper">
 				<div class="event__info">
 					<h2 class="event__info-title">Под слайм с любимым блогером? Да!</h2>

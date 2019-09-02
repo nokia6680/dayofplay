@@ -14,8 +14,10 @@
     @include flex-setting(column, flex-start, center);
 
     position: relative;
+  }
 
-    margin-bottom: 10px;
+  &__details-wrap {
+    margin-top: -55px;
   }
 
   &__details-date {
@@ -63,10 +65,12 @@
 @media only screen and (min-width: $mobile) {
   .intro {
     max-width: 300px;
+  }
+}
 
-    &__details {
-      margin-bottom: 10px;
-    }
+@media only screen and (min-width: $hdm) and (min-device-height: 700px){
+  .intro {
+    margin-bottom: 20px;
   }
 }
 
@@ -74,14 +78,22 @@
   .intro {
     max-width: 630px;
     transition: 0.2s ease-in;
+    margin-bottom: 0;
 
     &__details {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     &__details-pic {
-      width: 568px;
-      height: 398px;
+      width: 490px;
+      height: 323px;
+    }
+
+    &__details-wrap {
+      margin-top: -40px;
+
+      width: 438px;
+      height: 141px;
     }
 
     &__details-date {
@@ -128,13 +140,14 @@
 
     &__details {
       margin-bottom: 0;
-      margin-top: -10px;
+      margin-top: -35px;
       align-self: flex-end;
     }
 
     &__details-pic {
-      width: 401px;
-      height: 282px;
+      width: 430px;
+      min-width: 430px;
+      height: 283px;
     }
 
     &__details-date {
@@ -170,13 +183,8 @@
     &__details {
       margin-bottom: 0;
       margin-top: -40px;
-      margin-right: -64px;
+      margin-right: -20px;
       align-self: flex-end;
-    }
-
-    &__details-pic {
-      width: 502px;
-      height: 353px;
     }
 
     &__details-date {
@@ -217,16 +225,22 @@
 
     &__details {
       margin-bottom: 0;
-      margin-top: -10px;
+      margin-top: -50px;
       margin-right: 0;
       margin-left: 0;
       align-self: flex-end;
     }
 
     &__details-pic {
-      width: 633px;
-      min-width: 633px;
-      height: 445px;
+      width: 615px;
+      min-width: 615px;
+      height: 405px;
+    }
+
+    &__details-wrap {
+      width: 550px;
+      height: 177px;
+      margin-top: -50px;
     }
 
     &__details-date {

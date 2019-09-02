@@ -88,7 +88,7 @@
   .nav-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     width: 100%;
@@ -99,6 +99,8 @@
     top: auto;
 
     &__item {
+      /*Убрать!*/
+      margin-right: 40px;
       padding-top: 7px;
       padding-bottom: 4px;
       border: none;
@@ -117,7 +119,7 @@
         background-color: #ffd100;
 
         top: 13px;
-        right: -17px;
+        right: -20px;
       }
 
       &:last-of-type {
@@ -151,7 +153,7 @@
       padding-bottom: 6px;
 
       &::after {
-        right: -35px;
+        right: -20px;
         top: 14px;
       }
     }
@@ -169,7 +171,7 @@
       padding-bottom: 12px;
 
       &::after {
-        right: -32px;
+        right: -20px;
         top: 22px;
       }
     }

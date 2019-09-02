@@ -1,0 +1,774 @@
+.program-list {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  padding-top: 10px;
+
+  &--second {
+    position: relative;
+
+    padding-bottom: 50px;
+  }
+
+  &__item {
+    @include flex-setting(column, flex-start, center);
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+    &--1 {
+      &::before {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/book.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 56px;
+        height: 43px;
+
+        bottom: -5px;
+        left: 0px;
+
+        z-index: -1;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/volan.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 27px;
+        height: 28px;
+
+        bottom: -5px;
+        right: 0px;
+
+        z-index: -1;
+      }
+    }
+
+    &--center {
+      &::before {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/paw.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 80px;
+        height: 76px;
+
+        bottom: -5px;
+        left: 0px;
+
+        z-index: -1;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/flag.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 44px;
+        height: 55px;
+
+        bottom: -5px;
+        right: 0px;
+
+        z-index: -1;
+      }
+    }
+
+    &--4 {
+      &::after {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/heart-sm.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 40px;
+        height: 38px;
+
+        bottom: -5px;
+        right: 0px;
+
+        z-index: -1;
+      }
+    }
+
+    &--5 {
+      &::after {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/heart-lg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 50px;
+        height: 48px;
+
+        bottom: -5px;
+        left: 0px;
+
+        z-index: -1;
+      }
+    }
+
+    &--6 {
+      &::before {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/tennis.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 50px;
+        height: 48px;
+
+        bottom: -25px;
+        left: 0px;
+
+        z-index: -1;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/person.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        width: 87px;
+        height: 102px;
+
+        bottom: -75px;
+        right: 0px;
+
+        z-index: -1;
+      }
+    }
+  }
+
+  &__item-title {
+    background-color: #fff7df;
+
+    padding: 7px 10px;
+    margin-bottom: 5px;
+
+    max-width: 280px;
+
+    @include font-setting($primary-font, 0.75em, 1.2, 900, #073f72);
+
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.55px;
+  }
+
+  &__item-description {
+    max-width: 260px;
+
+    @include font-setting($primary-font, 0.625em, 1.5, 900, #073f72);
+
+    text-align: center;
+    letter-spacing: 0.37px;
+    text-transform: uppercase;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .program-list {
+    &__item {
+      margin-bottom: 10px;
+    }
+
+    &__item-title {
+      max-width: 360px;
+      width: auto;
+
+      font-size: 0.875em;
+    }
+
+    &__item-description {
+      max-width: 300px;
+
+      font-size: 0.75em;
+
+      margin-top: 7px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .program-list {
+    &--first {
+      padding-bottom: 20px;
+    }
+    &__item {
+      margin-bottom: 10px;
+
+      &--1 {
+        &::before {
+          width: 84px;
+          height: 65px;
+
+          bottom: -5px;
+          left: 0px;
+        }
+
+        &::after {
+          width: 40px;
+          height: 42px;
+
+          bottom: -5px;
+          right: 0px;
+        }
+      }
+
+      &--center {
+        &::before {
+          width: 120px;
+          height: 114px;
+
+          bottom: -25px;
+          left: 0px;
+        }
+
+        &::after {
+          width: 66px;
+          height: 83px;
+
+          bottom: -5px;
+          right: 0px;
+        }
+      }
+
+      &--4 {
+        &::after {
+          width: 40px;
+          height: 38px;
+
+          bottom: -5px;
+          right: 0px;
+        }
+      }
+
+      &--5 {
+        &::after {
+          width: 50px;
+          height: 48px;
+
+          bottom: -5px;
+          left: 0px;
+        }
+      }
+
+      &--6 {
+        &::before {
+          width: 50px;
+          height: 48px;
+
+          bottom: -25px;
+          left: 0px;
+        }
+
+        &::after {
+          width: 87px;
+          height: 102px;
+
+          bottom: -75px;
+          right: 0px;
+        }
+      }
+    }
+
+    &__item-title {
+      max-width: 380px;
+      width: auto;
+
+      font-size: 1em;
+    }
+
+    &__item-description {
+      max-width: 335px;
+
+      font-size: 0.875em;
+
+      margin-top: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) and (min-device-height: 700px){
+  .program-list {
+    &__item {
+      margin-bottom: 20px;
+    }
+
+    &__item-title {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .program-list {
+    &--first {
+      padding-bottom: 60px;
+    }
+
+    &__item {
+      margin-bottom: 16px;
+
+      &--1 {
+        &::before {
+          width: 112px;
+          height: 87px;
+
+          bottom: -30px;
+          left: 0px;
+        }
+
+        &::after {
+          width: 54px;
+          height: 57px;
+
+          bottom: -10px;
+          right: 0px;
+        }
+      }
+
+      &--center {
+        &::before {
+          width: 161px;
+          height: 153px;
+
+          bottom: -75px;
+          left: 0px;
+        }
+
+        &::after {
+          width: 89px;
+          height: 111px;
+
+          bottom: -25px;
+          right: 0px;
+        }
+      }
+
+      &--4 {
+        &::after {
+          width: 40px;
+          height: 38px;
+
+          bottom: 0px;
+          right: 75px;
+        }
+      }
+
+      &--5 {
+        &::after {
+          width: 50px;
+          height: 48px;
+
+          bottom: -50px;
+          left: 40px;
+        }
+      }
+
+      &--6 {
+        &::before {
+          width: 73px;
+          height: 71px;
+
+          bottom: -79px;
+          left: 40px;
+        }
+
+        &::after {
+          width: 175px;
+          height: 204px;
+
+          bottom: -135px;
+          right: 0px;
+        }
+      }
+    }
+
+    &__item-title {
+      max-width: 508px;
+      width: auto;
+
+      font-size: 1.438em;
+
+      padding: 10px 15px;
+
+      margin-bottom: 0;
+    }
+
+    &__item-description {
+      max-width: 400px;
+
+      font-size: 1em;
+
+      margin-top: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .program-list {
+    padding-bottom: 0;
+
+    &--first {
+      position: relative;
+    }
+
+    &__item {
+      margin-bottom: 12px;
+
+      &--1 {
+        &::before {
+          width: 95px;
+          height: 73px;
+
+          bottom: -30px;
+          left: -30px;
+
+          z-index: 0;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &--2 {
+        &::before {
+          position: absolute;
+          content: '';
+
+          width: 75px;
+          height: 94px;
+
+          background-image: url('../img/flag.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 50% 50%;
+
+          top: 70px;
+          left: 0;
+          z-index: 0;
+        }
+      }
+
+      &--center {
+        &::before {
+          width: 119px;
+          height: 114px;
+
+          bottom: -40px;
+          left: -80px;
+
+          z-index: 0;
+        }
+
+        &::after {
+          background-image: url('../img/person.png');
+          width: 105px;
+          height: 124px;
+          bottom: -45px;
+          right: -80px;
+          z-index: 0;
+        }
+      }
+
+      &--4 {
+        &::after {
+          width: 40px;
+          height: 38px;
+
+          bottom: 0px;
+          right: 45px;
+          z-index: 0;
+        }
+      }
+
+      &--5 {
+        &::after {
+          background-image: url('../img/tennis.png');
+          width: 50px;
+          height: 48px;
+
+          bottom: -120px;
+          right: 40px;
+          left: auto;
+          z-index: 0;
+        }
+      }
+
+      &--center {
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+      }
+    }
+
+    &__item-title {
+      max-width: 508px;
+      width: auto;
+
+      font-size: 1em;
+
+      padding: 8px 10px;
+    }
+
+    &__item-description {
+      max-width: 320px;
+
+      font-size: 0.75em;
+
+      margin-top: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .program-list {
+    &__item {
+      &--1 {
+        &::before {
+          width: 95px;
+          height: 73px;
+
+          bottom: -30px;
+          left: -30px;
+
+          z-index: 0;
+        }
+      }
+
+      &--2 {
+        &::before {
+          width: 75px;
+          height: 94px;
+
+          top: 70px;
+          left: 0;
+          z-index: 0;
+        }
+      }
+
+      &--center {
+        &::before {
+          width: 119px;
+          height: 114px;
+
+          bottom: -34px;
+          left: -80px;
+
+          z-index: 0;
+        }
+
+        &::after {
+          width: 105px;
+          height: 124px;
+          bottom: -37px;
+          right: -80px;
+          z-index: 0;
+        }
+      }
+
+      &--4 {
+        &::after {
+          width: 40px;
+          height: 38px;
+
+          bottom: 0px;
+          right: 45px;
+          z-index: 0;
+        }
+      }
+
+      &--5 {
+        &::after {
+          background-image: url('../img/tennis.png');
+          width: 50px;
+          height: 48px;
+
+          bottom: -120px;
+          right: 40px;
+          left: auto;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-sm) {
+  .program-list {
+    &--first {
+      position: relative;
+    }
+
+    &__item {
+      margin-bottom: 15px;
+
+      &--center {
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+      }
+    }
+
+    &__item-title {
+      max-width: 530px;
+      width: auto;
+
+      font-size: 1.25em;
+
+      padding: 10px 10px;
+    }
+
+    &__item-description {
+      max-width: 400px;
+
+      font-size: 0.875em;
+
+      margin-top: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .program-list {
+    &--first {
+      position: relative;
+    }
+
+    &__item {
+      margin-bottom: 35px;
+
+      &--1 {
+        &::before {
+          width: 117px;
+          height: 93px;
+
+          bottom: -30px;
+          left: -90px;
+
+          z-index: 0;
+        }
+      }
+
+      &--2 {
+        &::before {
+          width: 89px;
+          height: 111px;
+
+          top: 200px;
+          left: -20px;
+          z-index: 0;
+        }
+      }
+
+      &--center {
+        &::before {
+          width: 184px;
+          height: 175px;
+
+          bottom: -70px;
+          left: -130px;
+
+          z-index: 0;
+        }
+
+        &::after {
+          width: 163px;
+          height: 192px;
+          bottom: -80px;
+          right: -100px;
+          z-index: 0;
+        }
+      }
+
+      &--4 {
+        &::after {
+          width: 40px;
+          height: 38px;
+
+          bottom: -10px;
+          right: 20px;
+          z-index: 0;
+        }
+      }
+
+      &--5 {
+        &::after {
+          width: 73px;
+          height: 71px;
+
+          bottom: -200px;
+          right: -20px;
+          left: auto;
+          z-index: 0;
+        }
+      }
+
+      &--center {
+        position: absolute;
+        bottom: -120px;
+        left: 50%;
+      }
+    }
+
+    &__item-title {
+      max-width: 530px;
+      width: auto;
+
+      font-size: 1.5em;
+
+      padding: 10px 10px;
+    }
+
+    &__item-description {
+      max-width: 420px;
+
+      font-size: 1em;
+
+      margin-top: 5px;
+    }
+  }
+}

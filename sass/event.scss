@@ -10,6 +10,8 @@
 
   padding-top: 10px;
 
+  position: relative;
+
   &__wrapper {
     @include flex-setting(column, flex-start, center);
 
@@ -171,7 +173,7 @@
 
 @media only screen and (min-width: $widebook-sm) {
   .event {
-    padding-top: 126px;
+    padding-top: 86px;
   }
 }
 

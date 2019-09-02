@@ -27,7 +27,7 @@
 
 @media only screen and (min-width: $laptop) {
   .header {
-    display: none;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;

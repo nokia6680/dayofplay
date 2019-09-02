@@ -51,3 +51,19 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.rotate-left {
+  transform: rotate(-1deg);
+}
+
+.rotate-right {
+  transform: rotate(1deg);
+}
+
+.shadow-left {
+  box-shadow: -2px 2px 0 #073f72;
+}
+
+.shadow-right {
+  box-shadow: 2px 2px 0 #073f72;
+}

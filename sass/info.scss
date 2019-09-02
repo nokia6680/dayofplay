@@ -39,7 +39,7 @@
     }
   }
 
-  &__btn {
+  &__buttons {
     display: none;
   }
 }
@@ -78,6 +78,36 @@
       width: 380px;
       padding-top: 5px;
       padding-bottom: 5px;
+
+      &-text {
+        font-size: 0.875em;
+        max-width: 340px;
+
+        margin: 0;
+      }
+    }
+
+    &__event {
+      &-text {
+        max-width: 340px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) and (min-device-height: 700px){
+  .info {
+    max-width: 100%;
+    margin-top: 40px;
+
+    &__description {
+      width: 380px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      margin-bottom: 10px;
 
       &-text {
         font-size: 0.875em;
@@ -191,20 +221,38 @@
       }
     }
 
+    &__buttons {
+      @include flex-setting(row, center, center);
+
+      max-width: 520px;
+    }
+
     &__btn {
       @include flex-setting(column, center, center);
-      @include font-setting($primary-font, 2em, 1.2, 900, #ffffff);
+      @include font-setting($primary-font, 1.5em, 1.2, 900, #ffffff);
 
-      width: 272px;
-      height: 57px;
+      width: auto;
 
-      background-color: #ff6700;
-      box-shadow: 4px 4px 0 #073f72;
+      padding: 10px 15px;
 
       text-align: center;
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: 0.42px;
+
+      cursor: pointer;
+      outline: none;
+
+      &--buy {
+        background-color: #4ec337;
+        box-shadow: 4px 4px 0 #073f72;
+        margin-right: 20px;
+      }
+
+      &--event {
+        background-color: #ff6700;
+        box-shadow: 4px 4px 0 #073f72;
+      }
     }
   }
 }
