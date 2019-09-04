@@ -10,6 +10,8 @@
   padding-bottom: 10px;
   padding-top: 75px;
 
+  display: flex !important;
+
   &__wrapper {
     @include flex-setting(column, flex-start, center);
     width: 100%;

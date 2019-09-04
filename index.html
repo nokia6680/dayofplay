@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<!--[if lt IE 9]>
@@ -44,13 +45,16 @@
 			<div class="header-nav__layout">
 				<ul class="header-nav__list nav-list" id="nav">
 					<li class="nav-list__item">
+						<a class="nav-list__link slide-btn" href="#" data-slide="0" target="_self">Главная</a>
+					</li>
+					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Купить билет</a>
 					</li>
 					<li class="nav-list__item">
-						<a class="nav-list__link" href="#section01" target="_self">О фестивале</a>
+						<a class="nav-list__link slide-btn" href="#" data-slide="1" target="_self">О фестивале</a>
 					</li>
 					<li class="nav-list__item">
-						<a class="nav-list__link" href="#section02" target="_self">Конкурс</a>
+						<a class="nav-list__link slide-btn" href="#" data-slide="2"target="_self">Конкурс</a>
 					</li>
 					<!--
 					<li class="nav-list__item">
@@ -62,6 +66,9 @@
 					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Кое-что новое</a>
 					</li>-->
+					<li class="nav-list__item">
+						<a class="nav-list__link" href="/День когда пора играть - Вопросы о фестивале.pdf" target="_blank">Подробности</a>
+					</li>
 				</ul>
 			</div>
 			<button class="header-nav__btn header-nav__btn--open" type="button"></button>
@@ -98,16 +105,16 @@
 						<!--Hidden on mobile-->
 						<div class="info__buttons">
 							<a class="info__btn info__btn--buy" target="_blank" href="#">Купить билет</a>
-							<a class="info__btn info__btn--event" href="#section02" target="_self">Конкурс</a>
+							<a class="info__btn info__btn--event slide-btn" href="#" target="_self" data-slide="1">Конкурс</a>
 						</div>
 					</div>
 				<!--Mobile device controls block-->
 				<div class="index__controls">
 					<a class="index__controls-btn index__controls-btn--buy" href="#" target="_blank">Купить билет</a>
-					<a class="index__controls-btn index__controls-btn--event" href="#section01" target="_self">Конкурс</a>
+					<a class="index__controls-btn index__controls-btn--event slide-btn" href="#" data-slide="1" target="_self">Конкурс</a>
 				</div>
 			</div>
-			<a class="index__btn page-btn" href="#section01" target="_self">
+			<a class="index__btn page-btn slide-btn" href="#" data-slide="1" target="_self">
 				<span class="index__btn--text">Узнать больше</span>
 				<img class="index__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
 			</a>
@@ -157,7 +164,7 @@
 					<div class="next-3"></div>
 				</div>
 			</div>
-			<a class="program__btn page-btn" href="#section02" target="_self">
+			<a class="program__btn page-btn slide-btn" href="#" data-slide="2" target="_self">
 				<img class="program__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
 			</a>
 		</section>

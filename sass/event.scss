@@ -12,6 +12,8 @@
 
   position: relative;
 
+  display: flex !important;
+
   &__wrapper {
     @include flex-setting(column, flex-start, center);
 

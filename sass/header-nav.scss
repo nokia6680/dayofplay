@@ -47,6 +47,12 @@
     min-width: 128px;
     max-width: 128px;
     height: 60px;
+
+    position: relative;
+
+    &--hidden {
+      visibility: hidden;
+    }
   }
 
   &__logo-link {
@@ -65,6 +71,10 @@
     border: none;
     border-radius: 50%;
     background-color: transparent;
+
+    &--hidden {
+      visibility: hidden;
+    }
 
     &--open {
       background-image: url('../img/open-btn.png');

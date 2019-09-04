@@ -95,8 +95,6 @@ gulp.task("clean", function() {
 
 gulp.task("scripts", function() {
   return gulp.src("js/script.js")
-    .pipe(uglify())
-    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"));
 });
 
