@@ -1,0 +1,86 @@
+.festival-details {
+  @include flex-setting(column, flex-start, center);
+  width: 100%;
+
+  &__frame {
+    max-width: 300px;
+    transition: 0.2s ease-in;
+  }
+
+  &__frame-pic {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .festival-details {
+    &__frame {
+      max-width: 340px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .festival-details {
+    &__frame {
+      max-width: 380px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) and (min-device-height: 700px) {
+  .festival-details {
+    align-items: center;
+    &__frame {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .festival-details {
+    align-items: center;
+
+    &__frame {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .festival-details {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &__frame {
+      max-width: 550px;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-sm) {
+  .festival-details {
+    &__frame {
+      max-width: 640px;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $hd) {
+  .festival-details {
+    margin-bottom: 35px;
+    
+    &__frame {
+      min-width: 620px;
+      margin: 0;
+    }
+  }
+}

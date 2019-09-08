@@ -1,0 +1,501 @@
+.partners {
+  @include flex-setting(column, flex-start, center);
+  width: 100%;
+
+  background-image: url('../img/partner-bg.png');
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: cover;
+
+  display: flex !important;
+  padding-top: 10px;
+
+  &__slime {
+    display: none;
+  }
+
+  &__figure {
+    display: none;
+  }
+
+  &__wrapper {
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__title {
+    background-color: #ffd100;
+    box-shadow: 3px 3px 0 #ffffff;
+
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 1em, 1.2, 900, #073f73);
+
+    letter-spacing: 0.74px;
+    text-transform: uppercase;
+
+    padding: 5px 10px;
+
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    @include flex-setting(row, center, flex-start);
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    width: 50%;
+    max-height: 113px;
+
+    margin-bottom: 20px;
+  }
+
+  &__item-link {
+    pointer-events: none;
+    outline: none;
+  }
+}
+
+
+@media only screen and (min-width: $mobile) {
+  .partners {
+    &__wrapper {
+      max-width: 340px;
+    }
+
+    &__title {
+      font-size: 1.125em;
+
+      padding: 5px 10px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .partners {
+    padding-top: 20px;
+
+    &__wrapper {
+      max-width: 380px;
+    }
+
+    &__title {
+      font-size: 1.25em;
+
+      padding: 5px 10px;
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) and (min-device-height: 700px) {
+  .partners {
+    padding-top: 20px;
+
+    &__wrapper {
+      max-width: 380px;
+    }
+
+    &__title {
+      font-size: 1.25em;
+
+      padding: 5px 10px;
+      margin-bottom: 70px;
+    }
+
+    &__item {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .partners {
+    padding-top: 20px;
+    position: relative;
+
+    &__slime {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &--left {
+        background-image: url('../img/slime-upper.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 317px;
+        height: 295px;
+
+        left: -140px;
+        top: -115px;
+
+        z-index: 0;
+      }
+
+      &--right {
+        background-image: url('../img/slime-lower.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 565px;
+        height: 433px;
+
+        right: -300px;
+        bottom: -45px;
+
+        z-index: 0;
+      }
+    }
+
+    &__figure {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &--left {
+        background-image: url('../img/sponge-bob.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 370px;
+        height: 425px;
+
+        bottom: -40px;
+        left: -70px;
+      }
+
+      &--right {
+        background-image: url('../img/nella.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 133px;
+        height: 225px;
+
+        right: 83px;
+        bottom: 164px;
+      }
+    }
+
+    &__wrapper {
+      max-width: 612px;
+    }
+
+    &__title {
+      font-size: 2em;
+
+      padding: 0;
+      width: 508px;
+      height: 60px;
+      margin-bottom: 115px;
+    }
+
+    &__list {
+      justify-content: flex-start;
+    }
+
+    &__item {
+      width: auto;
+
+      margin-bottom: 42px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-right: 53px;
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        margin-right: 10px;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .partners {
+    padding-top: 45px;
+    position: relative;
+
+    &__slime {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &--left {
+        background-image: url('../img/slime-left.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 395px;
+        height: 295px;
+
+        left: -140px;
+        top: 0px;
+
+        z-index: 0;
+
+      }
+
+      &--right {
+        background-image: url('../img/slime-lower.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 565px;
+        height: 433px;
+
+        right: -300px;
+        bottom: -45px;
+
+        z-index: 0;
+      }
+    }
+
+    &__figure {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &--left {
+        background-image: url('../img/sponge-bob.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 370px;
+        height: 425px;
+
+        bottom: -40px;
+        left: -70px;
+      }
+
+      &--right {
+        background-image: url('../img/nella.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 133px;
+        height: 225px;
+
+        right: 83px;
+        bottom: 164px;
+      }
+    }
+
+    &__wrapper {
+      max-width: 630px;
+      align-items: center;
+    }
+
+    &__title {
+      align-self: center;
+      font-size: 2em;
+
+      padding: 0;
+      width: 508px;
+      height: 60px;
+      margin-bottom: 45px;
+    }
+
+    &__list {
+      justify-content: flex-start;
+      z-index: 1;
+    }
+
+    &__item {
+      width: auto;
+
+      margin-bottom: 42px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-right: 53px;
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-sm) {
+  .partners {
+    &__slime {
+      &--left {
+        width: 590px;
+        height: 521px;
+
+        left: -245px;
+        top: -100px;
+      }
+
+      &--right {
+        width: 646px;
+        height: 497px;
+
+        right: -200px;
+        bottom: 50px;
+      }
+    }
+
+    &__figure {
+      &--left {
+        width: 542px;
+        height: 626px;
+
+        bottom: -200px;
+        left: -70px;
+      }
+
+      &--right {
+        width: 274px;
+        height: 490px;
+
+        right: 83px;
+        bottom: 164px;
+      }
+    }
+
+    &__wrapper {
+      max-width: 732px;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 111px;
+    }
+
+    &__list {
+      justify-content: flex-start;
+      z-index: 1;
+    }
+
+    &__item {
+      width: auto;
+
+      margin-bottom: 42px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-right: 113px;
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        margin-right: 70px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .partners {
+    padding-top: 70px;
+    &__slime {
+      &--left {
+        width: 690px;
+        height: 521px;
+      }
+
+      &--right {
+        width: 646px;
+        height: 497px;
+
+        right: -200px;
+        bottom: 100px;
+      }
+    }
+
+    &__figure {
+      &--left {
+        width: 542px;
+        height: 626px;
+
+        bottom: -160px;
+        left: 0px;
+      }
+
+      &--right {
+        width: 274px;
+        height: 490px;
+
+        right: 125px;
+        bottom: 264px;
+      }
+    }
+
+    &__wrapper {
+      max-width: 732px;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 111px;
+    }
+
+    &__list {
+      justify-content: flex-start;
+      z-index: 1;
+    }
+
+    &__item {
+      width: auto;
+
+      margin-bottom: 42px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-right: 113px;
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        margin-right: 70px;
+
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hd) {
+  .partners {
+    &__figure {
+      &--right {
+        right: 216px;
+        bottom: 300px;
+      }
+    }
+  }
+}

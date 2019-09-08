@@ -1,0 +1,319 @@
+.festival {
+  @include flex-setting(column, flex-start, center);
+  width: 100%;
+
+  background-image:  url('../img/fest-clouds-sm.png'), url('../img/festival-bg.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top 60%, top center;
+  background-size: 100%, cover;
+
+  display: flex !important;
+
+  &__wrapper {
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+    max-width: 300px;
+    padding-top: 10px;
+  }
+
+  &__title {
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 0.75em, 1.2, 900, #ffffff);
+
+    width: 200px;
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: #57c6c0;
+    box-shadow: 3px 3px 0 #073f72;
+
+    letter-spacing: 0.74px;
+    text-transform: uppercase;
+  }
+
+  &__buy {
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 1em, 1.2, 900, #ffffff);
+
+    letter-spacing: 0.69px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: #4ec337;
+    box-shadow: 4px 4px 0 #073f72;
+
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    align-self: center;
+
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    width: 20px;
+    height: 10px;
+
+    text-transform: none;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    &-pic {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .festival {
+    &__wrapper {
+      max-width: 340px;
+      padding-top: 10px;
+
+      align-items: center;
+    }
+
+    &__title {
+      align-self: flex-start;
+
+      font-size: 0.938em;
+
+      width: 260px;
+      margin-bottom: 15px;
+
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    &__buy {
+      font-size: 1.125em;
+
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .festival {
+    &__wrapper {
+      max-width: 380px;
+      padding-top: 20px;
+    }
+
+    &__title {
+      align-self: flex-start;
+
+      font-size: 1.125em;
+
+      width: 300px;
+      margin-bottom: 25px;
+    }
+
+    &__buy {
+      font-size: 1.875em;
+
+      width: 315px;
+      height: 56px;
+      padding: 0;
+
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) and (min-device-height: 700px) {
+  .festival {
+    &__wrapper {
+      max-width: 380px;
+      padding-top: 20px;
+    }
+
+    &__title {
+      align-self: flex-start;
+
+      font-size: 1.125em;
+
+      width: 300px;
+      margin-bottom: 35px;
+    }
+
+    &__buy {
+      font-size: 1.875em;
+
+      width: 315px;
+      height: 56px;
+      padding: 0;
+
+      margin-bottom: 20px;
+    }
+
+    &__btn {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .festival {
+    &__wrapper {
+      max-width: 674px;
+      padding-top: 32px;
+    }
+
+    &__title {
+      font-size: 2em;
+
+      width: 527px;
+      height: 60px;
+
+      padding: 0;
+      margin-bottom: 13px;
+    }
+
+    &__buy {
+      margin-bottom: 25px;
+    }
+
+    &__btn {
+      width: 40px;
+      height: 20px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .festival {
+    align-items: center;
+    padding-top: 10px;
+    background-image:  url('../img/fest-clouds-big.png'), url('../img/festival-bg.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top 60%, top center;
+    background-size: 100%, cover;
+
+    &__wrapper {
+      max-width: 972px;
+      padding-top: 32px;
+
+      align-items: center;
+    }
+
+    &__title {
+      align-self: center;
+      font-size: 2em;
+
+      width: 527px;
+      height: 60px;
+
+      padding: 0;
+      margin-bottom: 13px;
+    }
+
+    &__buy {
+      width: 287px;
+      height: 40px;
+      font-size: 1.375em;
+      margin-bottom: 0px;
+    }
+
+    &__btn {
+      width: 40px;
+      height: 20px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .festival {
+    padding-top: 10px;
+
+    &__wrapper {
+      max-width: 1072px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-sm) {
+  .festival {
+    padding-top: 20px;
+
+    &__buy {
+      font-size: 1.875em;
+      height: 56px;
+      width: 315px;
+
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .festival {
+    background-position: top 30% center, top center;
+    padding-top: 50px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__buy {
+      font-size: 1.875em;
+      height: 56px;
+      width: 315px;
+
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hd) {
+  .festival {
+    background-position: top 40% center, top center;
+    padding-top: 50px;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__buy {
+      font-size: 1.875em;
+      height: 56px;
+      width: 315px;
+
+      margin-bottom: 25px;
+    }
+  }
+}

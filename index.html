@@ -54,15 +54,19 @@
 						<a class="nav-list__link slide-btn" href="#" data-slide="1" target="_self">О фестивале</a>
 					</li>
 					<li class="nav-list__item">
-						<a class="nav-list__link slide-btn" href="#" data-slide="2"target="_self">Конкурс</a>
+						<a class="nav-list__link slide-btn" href="#" target="_self" data-slide="3">Чем заняться</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link slide-btn" href="#" data-slide="2" target="_self">Конкурс</a>
 					</li>
 					<!--
 					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Место проведения</a>
-					</li>
+					</li>-->
 					<li class="nav-list__item">
-						<a class="nav-list__link" href="#" target="_self">Чем заняться</a>
+						<a class="nav-list__link slide-btn" href="#" target="_self" data-slide="4">Партнёры</a>
 					</li>
+					<!--
 					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Кое-что новое</a>
 					</li>-->
@@ -119,56 +123,60 @@
 				<img class="index__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
 			</a>
 		</section>
-		<!--Third page section-->
-		<section class="section main__program program" id="section01">
-			<div class="program__wrapper">
-				<h2 class="program__title">Что ещё ждёт тебя на фестивале?</h2>
-				<div class="program__slider program-slider">
-					<div class="program-slider__wrapper">
-						<!--Single list-->
-						<ul class="program-slider__list program-list program-list--first">
-							<li class="program-list__item program-list__item--1">
-								<b class="program-list__item-title rotate-right shadow-left">Минигольф «Щенячий патруль»</b>
-								<p class="program-list__item-description">Держи удар и загони все шарики в лунки!</p>
-							</li>
-							<li class="program-list__item program-list__item--2">
-								<b class="program-list__item-title shadow-right">Увлекательные мастер-классы</b>
-								<p class="program-list__item-description">поделки из картона, картины на воде, игрушки своими руками – все это ждёт тебя на чудесных мастер-классах от команды Nickelodeon</p>
-							</li>
-							<li class="program-list__item program-list__item--3">
-								<b class="program-list__item-title rotate-left shadow-right">Комната смеха</b>
-								<p class="program-list__item-description">Причудливые кривые зеркала подарят тебе широкую улыбку!</p>
-							</li>
-							<li class="program-list__item program-list__item--center">
-								<b class="program-list__item-title shadow-left">Гигантская дженга </b>
-								<p class="program-list__item-description">Прояви ловкость, чтобы не уронить гигантскую башню!</p>
-							</li>
-						</ul>
-						<!--Single list-->
-						<ul class="program-slider__list program-list program-list--second">
-							<li class="program-list__item program-list__item--4">
-								<b class="program-list__item-title shadow-left">Тир «Черепашки-ниндзя»</b>
-								<p class="program-list__item-description">Кавабанга! Ждём отважных и метких стрелков в нашем тире!</p>
-							</li>
-							<li class="program-list__item program-list__item--5">
-								<b class="program-list__item-title rotate-left shadow-left">Студия красоты от Nickelodeon</b>
-								<p class="program-list__item-description">примерь на себя образ бесстрашного героя или очаровательной принцессы! В нашей студии красоты будут происходить чудеса преображения!</p>
-							</li>
-							<li class="program-list__item program-list__item--6">
-								<b class="program-list__item-title rotate-right shadow-right">Киностудия от DЕТИКИНО</b>
-								<p class="program-list__item-description">Раскрой свой актерский талант в нашей студии</p>
-							</li>
-						</ul>
+		<!--Second page section-->
+		<section class="section main__festival festival" id="section03">
+			<div class="festival__wrapper">
+				<h2 class="festival__title">Программа фестиваля</h2>
+				<div class="festival__details festival-details">
+					<div class="festival-details__frame">
+						<img class="festival-details__frame-pic" src="img/xo-festival-sm.png" alt="Программа фестиваля" />
 					</div>
-					<div class="prev-3"></div>
-					<div class="next-3"></div>
+					<div class="festival-details__table fest-table">
+						<div class="fest-table__item fest-table__item--first">
+							<h3 class="fest-table__item-title">Главная сцена</h3>
+							<b class="fest-table__item-time">12:30 - 19:00</b>
+							<ul class="fest-table__list">
+								<li class="fest-table__list-item">
+									Челленджи
+								</li>
+								<li class="fest-table__list-item">
+									Конкурсы
+								</li>
+								<li class="fest-table__list-item">
+									Призы
+								</li>
+								<li class="fest-table__list-item">
+									Обливания слаймом
+								</li>
+								<li class="fest-table__list-item">
+									Танцы
+								</li>
+								<li class="fest-table__list-item">
+									Концерт
+								</li>
+							</ul>
+						</div>
+						<div class="fest-table__item fest-table__item--second">
+							<h3 class="fest-table__item-title">Зона Meet&Greet</h3>
+							<b class="fest-table__item-time">14:00 - 16:00</b>
+							<ul class="fest-table__list">
+								<li class="fest-table__list-item">
+									Фото с блогерами
+								</li>
+								<li class="fest-table__list-item">
+									Автограф сессия
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
+				<a class="festival__buy" href="#" target="_blank" title="Купить билет">Купить билет</a>
 			</div>
-			<a class="program__btn page-btn slide-btn" href="#" data-slide="2" target="_self">
-				<img class="program__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
+			<a class="festival__btn page-btn slide-btn" href="#" data-slide="2" target="_self">
+				<img class="festival__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
 			</a>
 		</section>
-		<!--Second page section-->
+		<!--Third page section-->
 		<section class="section main__event event" id="section02">
 			<div class="event__wrapper">
 				<div class="event__info">
@@ -256,6 +264,106 @@
 				<div class="prev"></div>
 				<div class="next"></div>
 			</div>
+			<a class="event__btn page-btn slide-btn" href="#" data-slide="3" target="_self">
+				<img class="event__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
+			</a>
+		</section>
+		<!--Fourth section-->
+		<section class="section main__program program" id="section01">
+			<div class="program__wrapper">
+				<h2 class="program__title">Что ещё ждёт тебя на фестивале?</h2>
+				<div class="program__slider program-slider">
+					<div class="program-slider__wrapper">
+						<!--Single list-->
+						<ul class="program-slider__list program-list program-list--first">
+							<li class="program-list__item program-list__item--1">
+								<b class="program-list__item-title rotate-right shadow-left">Минигольф «Щенячий патруль»</b>
+								<p class="program-list__item-description">Держи удар и загони все шарики в лунки!</p>
+							</li>
+							<li class="program-list__item program-list__item--2">
+								<b class="program-list__item-title shadow-right">Увлекательные мастер-классы</b>
+								<p class="program-list__item-description">поделки из картона, картины на воде, игрушки своими руками – все это ждёт тебя на чудесных мастер-классах от команды Nickelodeon</p>
+							</li>
+							<li class="program-list__item program-list__item--3">
+								<b class="program-list__item-title rotate-left shadow-right">Комната смеха</b>
+								<p class="program-list__item-description">Причудливые кривые зеркала подарят тебе широкую улыбку!</p>
+							</li>
+							<li class="program-list__item program-list__item--center">
+								<b class="program-list__item-title shadow-left">Гигантская дженга </b>
+								<p class="program-list__item-description">Прояви ловкость, чтобы не уронить гигантскую башню!</p>
+							</li>
+						</ul>
+						<!--Single list-->
+						<ul class="program-slider__list program-list program-list--second">
+							<li class="program-list__item program-list__item--4">
+								<b class="program-list__item-title shadow-left">Тир «Черепашки-ниндзя»</b>
+								<p class="program-list__item-description">Кавабанга! Ждём отважных и метких стрелков в нашем тире!</p>
+							</li>
+							<li class="program-list__item program-list__item--5">
+								<b class="program-list__item-title rotate-left shadow-left">Студия красоты от Nickelodeon</b>
+								<p class="program-list__item-description">примерь на себя образ бесстрашного героя или очаровательной принцессы! В нашей студии красоты будут происходить чудеса преображения!</p>
+							</li>
+							<li class="program-list__item program-list__item--6">
+								<b class="program-list__item-title rotate-right shadow-right">Киностудия от DЕТИКИНО</b>
+								<p class="program-list__item-description">Раскрой свой актерский талант в нашей студии</p>
+							</li>
+						</ul>
+					</div>
+					<div class="prev-3"></div>
+					<div class="next-3"></div>
+				</div>
+			</div>
+			<a class="program__btn page-btn slide-btn" href="#" data-slide="4" target="_self">
+				<img class="program__btn-pic" src="img/arrow-down.svg" alt="Вниз!" />
+			</a>
+		</section>
+		<!--Fifth section-->
+		<section class="section main__partners partners" id="section04">
+			<div class="partners__slime partners__slime--left"></div>
+			<div class="partners__figure partners__figure--left"></div>
+			<div class="partners__wrapper">
+				<h2 class="partners__title">Партнёры фестиваля</h2>
+				<ul class="partners__list">
+					<!--SIngle item-->
+					<li class="partners__item">
+						<a class="partners__item-link partners__item-link--disabled" target="_blank" disabled>
+							<img class="partners__item-pic" src="img/partner-1.png" alt="" />
+						</a>
+					</li>
+					<!--SIngle item-->
+					<li class="partners__item">
+						<a class="partners__item-link partners__item-link--disabled" target="_blank" disabled>
+							<img class="partners__item-pic" src="img/partner-2.png" alt="" />
+						</a>
+					</li>
+					<!--SIngle item-->
+					<li class="partners__item">
+						<a class="partners__item-link partners__item-link--disabled" target="_blank" disabled>
+							<img class="partners__item-pic" src="img/partner-3.png" alt="" />
+						</a>
+					</li>
+					<!--SIngle item-->
+					<li class="partners__item">
+						<a class="partners__item-link partners__item-link--disabled" target="_blank" disabled>
+							<img class="partners__item-pic" src="img/partner-6.png" alt="" />
+						</a>
+					</li>
+					<!--SIngle item-->
+					<li class="partners__item">
+						<a class="partners__item-link partners__item-link--disabled" target="_blank" disabled>
+							<img class="partners__item-pic" src="img/partner-4.png" alt="" />
+						</a>
+					</li>
+					<!--SIngle item-->
+					<li class="partners__item">
+						<a class="partners__item-link partners__item-link--disabled" target="_blank" disabled>
+							<img class="partners__item-pic" src="img/partner-5.png" alt="" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="partners__slime partners__slime--right"></div>
+			<div class="partners__figure partners__figure--right"></div>
 		</section>
 	</main>
 	<!--Footer-->

@@ -63,6 +63,20 @@
 
     margin: 0;
   }
+
+  &__btn {
+    width: 20px;
+    height: 10px;
+
+    text-transform: none;
+    margin-top: 40px;
+    margin-bottom: 5px;
+
+    &-pic {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -141,6 +155,13 @@
       letter-spacing: 0.32px;
       font-size: 0.812em;
     }
+
+    &__btn {
+      width: 40px;
+      height: 20px;
+
+      margin-top: 50px;
+    }
   }
 }
 @media only screen and (min-width: $laptop) {
@@ -169,6 +190,10 @@
       max-width: 540px;
       font-size: 1.125em;
       transform: rotate(1deg);
+    }
+
+    &__btn {
+      margin-top: 43px;
     }
   }
 }

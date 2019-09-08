@@ -101,7 +101,7 @@
     &__item {
       /*Убрать!*/
       margin-right: 40px;
-      padding-top: 7px;
+      padding-top: 11px;
       padding-bottom: 4px;
       border: none;
       width: auto;
@@ -118,7 +118,7 @@
         transform: rotate(-45deg);
         background-color: #ffd100;
 
-        top: 13px;
+        top: 16px;
         right: -20px;
       }
 
@@ -141,7 +141,7 @@
     }
 
     &__link {
-      font-size: 0.875em;
+      font-size: 0.625em;
     }
   }
 }

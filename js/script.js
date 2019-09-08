@@ -103,7 +103,6 @@ $('.main').on('afterChange', function() {
     var dataId = $('.slick-current').attr("data-slick-index");
     var header = $('.header-nav__logo');
     var headerMenu = $('.header-nav__btn');
-    console.log(dataId);
 
     if(dataId > 0) {
       header.addClass('header-nav__logo--hidden');
@@ -119,28 +118,14 @@ $('.main').on('afterChange', function() {
     else {
       headerMenu.removeClass('header-nav__btn--hidden');
     }
+
+    if(dataId > 2) {
+      headerMenu.removeClass('header-nav__btn--hidden');
+    }
 });
 
 
 $(document).ready(function() {
-  /*
-  $("#nav .nav-list__link, #main a").on("click", function(event) {
-    if ($(this).attr('target') == '_blank') {
-      return true;
-    }
-
-    //забираем идентификатор бока с атрибута href
-    var id = $(this).attr('href'),
-
-      //узнаем высоту от начала страницы до блока на который ссылается якорь
-      top = $(id).offset().top;
-
-    //анимируем переход на расстояние - top за 1500 мс
-    $('body,html').animate({
-      scrollTop: top
-    }, 1500);
-  });
-  */
   $('.slider__item').click(function() {
     pers = $(this).find('.slider__item-photo').attr('alt');
     gender = $(this).find('.slider__item-photo').data('gender');
