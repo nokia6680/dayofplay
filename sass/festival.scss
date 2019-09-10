@@ -61,6 +61,10 @@
     margin-bottom: 20px;
   }
 
+  .info__btn--buy {
+    @extend .festival__buy;
+  }
+
   &__btn {
     width: 20px;
     height: 10px;

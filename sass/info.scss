@@ -13,29 +13,37 @@
 
     @include flex-setting(column, center, center);
 
+    margin-bottom: 10px;
+
     &-text {
       text-align: center;
       text-transform: uppercase;
 
-      @include font-setting($primary-font, 0.72em, 1.2, 700, #fff7df);
+      @include font-setting($primary-font, 0.625em, 1.2, 700, #fff7df);
 
       max-width: 290px;
+    }
+
+    &-text-desktop {
+      display: none;
     }
   }
 
   &__event {
     @include flex-setting(column, center, center);
+    align-self: flex-start;
 
     &-text {
       text-align: center;
       text-transform: uppercase;
 
-      @include font-setting($primary-font, 0.65em, 1.2, 700, #073f72);
+      @include font-setting($primary-font, 1.25em, 1.2, 700, #073f72);
 
-      margin-top: 5px;
-      margin-bottom: 3px;
+      margin-top: 0px;
+      margin-bottom: 0;
 
-      max-width: 280px;
+      max-width: 230px;
+      transform: rotate(-2deg);
     }
   }
 
@@ -60,10 +68,8 @@
 
     &__event {
       &-text {
-        font-size: 0.75em;
+        font-size: 1.375em;
         max-width: 340px;
-        margin-top: 5px;
-        margin-bottom: 5px;
       }
     }
   }
@@ -74,14 +80,16 @@
     max-width: 100%;
     margin-top: 0;
 
+    padding: 0 1.25rem;
+
     &__description {
-      width: 380px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      width: 390px;
+      padding-top: 10px;
+      padding-bottom: 10px;
 
       &-text {
         font-size: 0.875em;
-        max-width: 340px;
+        max-width: 380px;
 
         margin: 0;
       }
@@ -89,9 +97,8 @@
 
     &__event {
       &-text {
+        font-size: 1.5em;
         max-width: 340px;
-        margin-top: 5px;
-        margin-bottom: 5px;
       }
     }
   }
@@ -103,15 +110,15 @@
     margin-top: 40px;
 
     &__description {
-      width: 380px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      width: 390px;
+      padding-top: 10px;
+      padding-bottom: 10px;
 
       margin-bottom: 10px;
 
       &-text {
         font-size: 0.875em;
-        max-width: 340px;
+        max-width: 380px;
 
         margin: 0;
       }
@@ -120,8 +127,6 @@
     &__event {
       &-text {
         max-width: 340px;
-        margin-top: 5px;
-        margin-bottom: 5px;
       }
     }
   }
@@ -132,26 +137,31 @@
     max-width: 100%;
     margin-top: 0;
 
+    padding: 0 3em;
+
     &__description {
       width: 640px;
       transition: 0.2s ease-in;
+      padding-top: 8px;
+      padding-bottom: 8px;
 
       &-text {
-        font-size: 1.125em;
-        line-height: 1.4;
+        font-size: 1.375em;
+        line-height: 1.2;
         max-width: 630px;
         transition: 0.2s ease-in;
       }
     }
 
     &__event {
+      margin-left: 40px;
+
       &-text {
-        font-size: 0.875em;
+        font-size: 2.25em;
+        line-height: 1.1;
         max-width: 500px;
-        line-height: 1.4;
-        margin-top: 7px;
-        margin-bottom: 7px;
         transition: 0.2s ease-in;
+        letter-spacing: 0.83px;
       }
     }
   }
@@ -163,11 +173,12 @@
     margin-top: 38px;
 
     &__description {
-      width: 517px;
+      width: 500px;
       transition: 0.2s ease-in;
       transform: rotate(-1deg);
       box-shadow: 5px 5px 0 #00c5df;
 
+      margin-bottom: 27px;
       position: relative;
 
       &::after {
@@ -209,48 +220,153 @@
 
         transform: rotate(1deg);
       }
+
+      &-text-mobile {
+        display: none;
+      }
+
+      &-text-desktop {
+        @include flex-setting(row, center, center);
+        flex-wrap: wrap;
+      }
+    }
+
+    &__description-span:first-child {
+      font-size: 1.875rem;
+      color: #fff7df;
+      transform: rotate(-4deg);
+      letter-spacing: 0.88px;
+      margin-right: 60px;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 24px;
+        height: 24px;
+
+        background-image: url('../img/heart-new-sm.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        right: -44px;
+        top: 7px;
+      }
+    }
+
+    &__description-span:nth-child(2) {
+      font-size: 1.75rem;
+      color: #fff7df;
+      transform: rotate(1deg);
+      letter-spacing: 0.74px;
+    }
+
+    &__description-span:nth-child(3) {
+      font-size: 1.875rem;
+      color: #fff7df;
+      transform: rotate(-3deg);
+      letter-spacing: 0.83px;
+      margin-left: -40px;
+      margin-bottom: 10px;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 51px;
+        height: 49px;
+
+        background-image: url('../img/heart-new-big.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        right: -95px;
+        top: 80px;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 80px;
+        height: 88px;
+
+        background-image: url('../img/rocket.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        left: -135px;
+        top: 65px;
+
+        transform: scale(0.8);
+      }
+    }
+
+    &__description-span:nth-child(4) {
+      font-size: 1.625rem;
+      color: #fff7df;
+      transform: rotate(-3deg);
+      letter-spacing: 0.69px;
+      margin-left: -40px;
+      margin-bottom: 10px;
+    }
+
+    &__description-span:nth-child(5) {
+      font-size: 1.5rem;
+      color: #fff7df;
+      transform: rotate(-1deg);
+      letter-spacing: 0.6px;
+      margin-left: -40px;
     }
 
     &__event {
+      margin-bottom: 40px;
+
       &-text {
-        font-size: 1.125em;
-        max-width: 440px;
-        margin-top: 20px;
-        margin-bottom: 24px;
+        font-size: 2.25em;
+        transform: none;
+        max-width: 500px;
         transition: 0.2s ease-in;
+        margin-bottom: 12px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 
     &__buttons {
       @include flex-setting(row, center, center);
 
-      max-width: 520px;
+      max-width: 445px;
     }
 
     &__btn {
       @include flex-setting(column, center, center);
-      @include font-setting($primary-font, 1.5em, 1.2, 900, #ffffff);
+      @include font-setting($primary-font, 2.5em, 1.2, 900, #ffffff);
 
-      width: auto;
+      width: 445px;
+      height: 80px;
 
-      padding: 10px 15px;
+      padding: 0;
 
       text-align: center;
       text-transform: uppercase;
       text-decoration: none;
-      letter-spacing: 0.42px;
+      letter-spacing: 0.92px;
 
       cursor: pointer;
       outline: none;
 
       &--buy {
         background-color: #4ec337;
-        box-shadow: 4px 4px 0 #073f72;
-        margin-right: 20px;
-      }
-
-      &--event {
-        background-color: #ff6700;
         box-shadow: 4px 4px 0 #073f72;
       }
     }
@@ -264,16 +380,21 @@
     margin-top: 38px;
 
     &__description {
-      width: 517px;
+      width: 500px;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
 
       &-text {
-        line-height: 1.5;
+        line-height: 1.1;
       }
     }
 
     &__event {
+      margin-bottom: 20px;
+
       &-text {
-        line-height: 1.5;
+        line-height: 1.1;
       }
     }
   }
@@ -288,6 +409,10 @@
     &__description {
       width: 559px;
       margin-bottom: 70px;
+
+
+      padding-top: 20px;
+      padding-bottom: 30px;
 
       &::after {
         width: 96px;
@@ -305,18 +430,76 @@
 
       &-text {
         max-width: 528px;
-        font-size: 1.625em;
       }
     }
 
-    &__event {
-      margin-bottom: 0px;
 
-      &-text {
-        max-width: 528px;
-        font-size: 1.5em;
-        margin-bottom: 15px;
-      }
+          &__description-span:first-child {
+            font-size: 2.375rem;
+
+            &::after {
+              position: absolute;
+              content: '';
+
+              width: 24px;
+              height: 24px;
+
+              background-image: url('../img/heart-new-sm.png');
+              background-position: 50% 50%;
+              background-repeat: no-repeat;
+              background-size: contain;
+
+              right: -44px;
+              top: 7px;
+            }
+          }
+
+          &__description-span:nth-child(2) {
+            font-size: 2rem;
+          }
+
+          &__description-span:nth-child(3) {
+            font-size: 2.25rem;
+            margin-left: -40px;
+            margin-bottom: 10px;
+
+            &::after {
+              position: absolute;
+              content: '';
+
+              width: 51px;
+              height: 49px;
+
+              background-image: url('../img/heart-new-big.png');
+              background-position: 50% 50%;
+              background-repeat: no-repeat;
+              background-size: contain;
+
+              right: -105px;
+              top: 90px;
+            }
+
+            &::before {
+            left: -135px;
+              top: 84px;
+
+              transform: scale(1);
+            }
+          }
+
+          &__description-span:nth-child(4) {
+            font-size: 1.875rem;
+            margin-left: -40px;
+            margin-bottom: 10px;
+          }
+
+          &__description-span:nth-child(5) {
+            font-size: 1.625rem;
+            margin-left: -40px;
+          }
+
+    &__event {
+      margin-bottom: 30px;
     }
   }
 }

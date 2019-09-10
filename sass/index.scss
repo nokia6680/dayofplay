@@ -32,7 +32,7 @@
 
     width: 100%;
     max-width: 280px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   &__controls-btn {
@@ -82,7 +82,7 @@
   .index {
     &__controls {
       max-width: 360px;
-      margin-bottom: 7px;
+      margin-bottom: 15px;
     }
 
     &__controls-btn {
@@ -99,11 +99,13 @@
 
     &__controls {
       max-width: 380px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     &__controls-btn {
       font-size: 1.25em;
+      padding-left: 1.25em;
+      padding-right: 1.25em;
     }
   }
 }
@@ -121,7 +123,7 @@
   .index {
     background-position: left -30px top 50%, top center;
 
-    padding-top: 160px;
+    padding-top: 150px;
 
     &__controls {
       max-width: 560px;
@@ -129,13 +131,9 @@
     }
 
     &__controls-btn {
-      font-size: 1.875em;
-      padding: 16px 18px;
-      height: 56px;
-
-      &--event {
-        width: 240px;
-      }
+      font-size: 2.5em;
+      height: 63px;
+      width: 493px;
     }
 
     &__btn {
@@ -201,6 +199,7 @@
 
       &--text {
         display: inline-flex;
+        text-transform: uppercase;
         margin-bottom: 2px;
         @include font-setting($primary-font, 0.625em, 1.2, 900, #073f72);
       }
@@ -273,7 +272,7 @@
 @media only screen and (min-width: $widebook-hd) {
   .index {
     padding-top: 64px;
-    background-position: left -30px top 30%, top center;
+    background-position: left -30px top 20%, top center;
 
     &__wrapper {
       max-width: 1162px;
@@ -281,6 +280,10 @@
 
     &__btn {
       bottom: 90px;
+
+      &-text {
+        font-size: 0.875em;
+      }
     }
   }
 }
